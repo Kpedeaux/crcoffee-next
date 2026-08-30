@@ -53,8 +53,8 @@
     var canAV1 = video.canPlayType('video/mp4; codecs="av01.0.08M.10"') !== '';
     var portrait = window.matchMedia('(orientation: portrait)').matches;
     video.src = portrait
-      ? (canAV1 ? '/video/hero-loop-portrait-2160.av1.mp4?v=5' : '/video/hero-loop-portrait.mp4?v=5')
-      : (canAV1 ? '/video/hero-loop-1920.av1.mp4?v=5' : '/video/hero-loop-1920.mp4?v=5');
+      ? (canAV1 ? '/video/hero-loop-portrait-2160.av1.mp4?v=6' : '/video/hero-loop-portrait.mp4?v=6')
+      : (canAV1 ? '/video/hero-loop-1920.av1.mp4?v=6' : '/video/hero-loop-1920.mp4?v=6');
 
     video.addEventListener('playing', function () {
       video.classList.add('is-playing');
