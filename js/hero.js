@@ -24,6 +24,71 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* Time-of-day greeting (New Orleans clock). Static fallback text stays for no-JS. */
+  var greetText = document.getElementById('hero-greet-text');
+  if (greetText) {
+    try {
+      var nolaHour = parseInt(new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago', hour: 'numeric', hour12: false
+      }).format(new Date()), 10);
+      if (nolaHour >= 5 && nolaHour < 11) {
+        greetText.textContent = 'Good morning. The roaster’s been on since five.';
+      } else if (nolaHour >= 11 && nolaHour < 16) {
+        greetText.textContent = 'Good afternoon. The cold brew steeped 18 hours for this.';
+      } else if (nolaHour >= 16 && nolaHour < 19) {
+        greetText.textContent = 'Good evening. Open until 7 on Magazine Street.';
+      } else {
+        greetText.textContent = 'Good evening. First pour tomorrow is at 6am.';
+      }
+    } catch (e) { /* fallback text stands */ }
+  }
+
+  /* Live open/closed chips on the location strip */
+  function fmtHour(h) {
+    if (h === 12) return 'noon';
+    return h < 12 ? h + 'am' : (h - 12) + 'pm';
+  }
+  document.querySelectorAll('.open-status[data-hours]').forEach(function (el) {
+    try {
+      var hours = JSON.parse(el.getAttribute('data-hours'));
+      var parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', hour12: false
+      }).formatToParts(new Date());
+      var dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      var day = null, hour = null;
+      parts.forEach(function (p) {
+        if (p.type === 'weekday') day = dayMap[p.value];
+        if (p.type === 'hour') hour = parseInt(p.value, 10) % 24;
+      });
+      var today = hours[String(day)];
+      if (!today) return;
+      if (hour >= today[0] && hour < today[1]) {
+        el.textContent = 'Open until ' + fmtHour(today[1]);
+        el.classList.add('open-status--open');
+      } else if (hour < today[0]) {
+        el.textContent = 'Opens at ' + fmtHour(today[0]);
+      } else {
+        var next = hours[String((day + 1) % 7)];
+        el.textContent = next ? 'Opens at ' + fmtHour(next[0]) + ' tomorrow' : 'Closed';
+      }
+    } catch (e) { /* static hours text stands */ }
+  });
+
+  /* Section reveal: gentle fade-up once, CSS-gated for reduced motion */
+  if ('IntersectionObserver' in window) {
+    var revealer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { revealer.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in-view'); });
+  }
+
   /* Background video */
   var media = document.querySelector('.hero__media');
   var pauseBtn = document.getElementById('hero-pause');

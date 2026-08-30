@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" media="(orientation: landscape)" fetchpriority="high">
   <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=1">
+  <link rel="stylesheet" href="/css/main.css?v=2">
 </head>
 <body>
 
@@ -27,10 +27,10 @@
         <span class="header__wordmark">CR&nbsp;Coffee&nbsp;Shop</span>
       </a>
       <nav class="header__nav" aria-label="Main">
-        <a class="header__link" href="#placeholder">Menu</a>
-        <a class="header__link" href="#placeholder">Our Coffee</a>
-        <a class="header__link" href="#placeholder">Locations</a>
-        <a class="header__link" href="#placeholder">News</a>
+        <a class="header__link" href="https://crcoffeenola.com/drinks" rel="noopener">Menu</a>
+        <a class="header__link" href="#roaster">Our Coffee</a>
+        <a class="header__link" href="#locations">Locations</a>
+        <a class="header__link" href="#news">News</a>
       </nav>
       <a class="btn btn--primary header__order" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
     </div>
@@ -53,7 +53,7 @@
       </div>
 
       <div class="hero__content">
-        <p class="hero__eyebrow">New Orleans &middot; Est. 2015</p>
+        <p class="hero__greet" id="hero-greet"><span class="hero__greet-dot" aria-hidden="true"></span><span id="hero-greet-text">New Orleans &middot; Est. 2015</span></p>
         <h1 class="hero__title">Fresh coffee, roasted the&nbsp;old&nbsp;way.</h1>
         <p class="hero__sub">We roast our beans on antique machines and pour them at four shops around New Orleans. Order ahead, or take home a bag.</p>
         <div class="hero__actions">
@@ -70,10 +70,129 @@
       </button>
     </section>
 
-    <section class="stub" id="placeholder">
-      <div class="stub__inner">
-        <p class="stub__note">Beta preview. The sections below arrive after the design round:</p>
-        <p class="stub__list">Order &middot; Fresh-roasted beans &middot; Locations &middot; Our coffee &middot; News &amp; press</p>
+    <section class="locations" id="locations" aria-label="Locations">
+      <ul class="locations__grid">
+        <li class="locations__card">
+          <p class="locations__tag">Uptown &middot; Flagship</p>
+          <h2 class="locations__name">Magazine Street</h2>
+          <p class="locations__meta"><span class="open-status" data-hours='{"0":[6,19],"1":[6,19],"2":[6,19],"3":[6,19],"4":[6,19],"5":[6,19],"6":[6,19]}'>Daily 6am to 7pm</span> &middot; <a class="locations__addr" href="https://maps.app.goo.gl/NbAMga61Ed1Yhkj4A" rel="noopener">3618 Magazine St</a></p>
+        </li>
+        <li class="locations__card">
+          <p class="locations__tag">St. Claude &middot; The Original</p>
+          <h2 class="locations__name">St. Roch Market</h2>
+          <p class="locations__meta"><span class="open-status" data-hours='{"0":[7,19],"1":[7,19],"2":[7,19],"3":[7,19],"4":[7,19],"5":[7,19],"6":[7,19]}'>Daily 7am to 7pm</span> &middot; <a class="locations__addr" href="https://maps.app.goo.gl/rcH6o5J2t51e1evS7" rel="noopener">2381 St Claude Ave</a></p>
+        </li>
+        <li class="locations__card">
+          <p class="locations__tag">Old Metairie</p>
+          <h2 class="locations__name">Metairie Road</h2>
+          <p class="locations__meta"><span class="open-status" data-hours='{"0":[7,18],"1":[6,18],"2":[6,18],"3":[6,18],"4":[6,18],"5":[6,18],"6":[7,18]}'>Weekdays 6am to 6pm</span> &middot; <a class="locations__addr" href="https://maps.app.goo.gl/hXsVM1xVw82BiEeX6" rel="noopener">603&#189; Metairie Rd</a></p>
+        </li>
+        <li class="locations__card">
+          <p class="locations__tag">MSY Airport</p>
+          <h2 class="locations__name">Louis Armstrong International</h2>
+          <p class="locations__meta">Hours vary by terminal</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="beans reveal" id="beans" aria-label="Fresh-roasted beans">
+      <div class="beans__inner">
+        <div class="beans__figure">
+          <picture>
+            <source srcset="/img/beans-tumble.webp" type="image/webp">
+            <img src="/img/beans-tumble.jpg" alt="Fresh-roasted beans tumbling out of the roaster" width="900" height="1028" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="beans__list">
+          <h2 class="section-title">Five blends, roasted here.</h2>
+          <ul class="blend-index">
+            <li class="blend-index__row">
+              <span class="blend-index__name">Streetcar Blend</span>
+              <span class="blend-index__right"><span class="blend-index__note">The everyday cup</span><span class="blend-index__price">$19.75</span></span>
+            </li>
+            <li class="blend-index__row">
+              <span class="blend-index__name">French Roast</span>
+              <span class="blend-index__right"><span class="blend-index__note">Dark and bold</span><span class="blend-index__price">$19.75</span></span>
+            </li>
+            <li class="blend-index__row">
+              <span class="blend-index__name">St. Roch Blend</span>
+              <span class="blend-index__right"><span class="blend-index__note">Where it all started</span><span class="blend-index__price">$19.75</span></span>
+            </li>
+            <li class="blend-index__row">
+              <span class="blend-index__name">Cold Brew Blend</span>
+              <span class="blend-index__right"><span class="blend-index__note">Built for an 18 hour steep</span><span class="blend-index__price">$19.75</span></span>
+            </li>
+            <li class="blend-index__row">
+              <span class="blend-index__name">Espresso Blend</span>
+              <span class="blend-index__right"><span class="blend-index__note">For the machine at home</span><span class="blend-index__price">$19.75</span></span>
+            </li>
+          </ul>
+          <div class="beans__cta">
+            <a class="btn btn--primary" href="https://cr-coffee-shop.square.site/shop/at-home-coffee-and-tea/4" rel="noopener">Shop fresh beans</a>
+            <span class="beans__ship">Ships anywhere in the U.S.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roaster reveal" id="roaster" aria-label="The Royal No. 6 roaster">
+      <div class="roaster__media" aria-hidden="true">
+        <picture>
+          <source srcset="/img/flames-band.webp" type="image/webp">
+          <img src="/img/flames-band.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+        </picture>
+        <div class="roaster__scrim"></div>
+      </div>
+      <div class="roaster__content">
+        <picture>
+          <source srcset="/img/royal-plate.webp" type="image/webp">
+          <img class="roaster__plate" src="/img/royal-plate.jpg" alt="The ornate Royal No. 6 nameplate on the antique roaster" width="680" height="385" loading="lazy" decoding="async">
+        </picture>
+        <h2 class="section-title">Meet the Royal No. 6.</h2>
+        <p class="roaster__body">Our roasters were built a century ago, cast iron and open flame. We have roasted on machines like this since 2009, in small batches, by hand and by ear.</p>
+        <div class="roaster__cta">
+          <a class="btn btn--ghost" href="https://crcoffeenola.com/coffee" rel="noopener">Our coffee</a>
+          <span class="roaster__tag">Roasted in New Orleans</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="finder reveal" aria-label="Find your roast">
+      <div class="finder__card">
+        <div class="finder__text">
+          <h2 class="finder__title">Not sure which bag?</h2>
+          <p class="finder__sub">Three quick questions and we&#39;ll point you to your blend.</p>
+          <div class="finder__chips" aria-hidden="true">
+            <span class="finder__chip">How do you brew?</span>
+            <span class="finder__chip">How dark?</span>
+            <span class="finder__chip">Milk or black?</span>
+          </div>
+        </div>
+        <a class="btn btn--primary btn--lg finder__btn" href="https://cr-coffee-shop.square.site/shop/at-home-coffee-and-tea/4" rel="noopener">Find your roast</a>
+      </div>
+    </section>
+
+    <section class="news reveal" id="news" aria-label="News from the shop">
+      <div class="news__head">
+        <h2 class="section-title">From the shop</h2>
+        <a class="news__all" href="https://crcoffeenola.com/news" rel="noopener">All news</a>
+      </div>
+      <div class="news__grid">
+        <a class="news-card" href="https://crcoffeenola.com/news/chocolate-covered-espresso-bean-frozen" rel="noopener">
+          <img class="news-card__img" src="/img/chocolate-covered-espresso-bean-frozen-card.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+          <p class="news-card__date">August 2026</p>
+          <h3 class="news-card__title">The Most Decadent Drink We Make Is Also the Coldest</h3>
+        </a>
+        <a class="news-card" href="https://crcoffeenola.com/news/back-to-school-study-spot-2026" rel="noopener">
+          <img class="news-card__img" src="/img/back-to-school-study-spot-2026-card.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+          <p class="news-card__date">August 2026</p>
+          <h3 class="news-card__title">Hey, I Got the Study Spot.</h3>
+        </a>
+        <a class="news-card" href="https://crcoffeenola.com/news/axios-bayou-beast-2026" rel="noopener">
+          <img class="news-card__img" src="/img/axios-bayou-beast-2026-card.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+          <p class="news-card__date">July 2026</p>
+          <h3 class="news-card__title">The Bayou Beast Made the News</h3>
+        </a>
       </div>
     </section>
 
@@ -84,9 +203,48 @@
   </div>
 
   <footer class="footer">
-    <p class="footer__line">&copy; <span id="js-year">2026</span> CR Coffee Shop &middot; New Orleans, Louisiana &middot; Beta preview, not the live site</p>
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__lockup">
+          <img src="/img/cr-monogram-dark.jpg" alt="" width="30" height="30">
+          <span class="footer__wordmark">CR Coffee Shop</span>
+        </div>
+        <p class="footer__tagline">Serving antique roasted coffee. New Orleans since 2015.</p>
+      </div>
+      <nav class="footer__col" aria-label="Locations">
+        <p class="footer__heading">Locations</p>
+        <a class="footer__link" href="https://crcoffeenola.com/magazine-street" rel="noopener">Magazine Street</a>
+        <a class="footer__link" href="https://crcoffeenola.com/st-roch-market" rel="noopener">St. Roch Market</a>
+        <a class="footer__link" href="https://crcoffeenola.com/old-metairie" rel="noopener">Old Metairie</a>
+        <a class="footer__link" href="https://crcoffeenola.com/msy-airport" rel="noopener">MSY Airport</a>
+      </nav>
+      <nav class="footer__col" aria-label="Company">
+        <p class="footer__heading">Company</p>
+        <a class="footer__link" href="https://crcoffeenola.com/about" rel="noopener">About</a>
+        <a class="footer__link" href="https://crcoffeenola.com/coffee" rel="noopener">Our Coffee</a>
+        <a class="footer__link" href="https://crcoffeenola.com/drinks" rel="noopener">Menu</a>
+        <a class="footer__link" href="https://crcoffeenola.com/rewards" rel="noopener">Rewards</a>
+        <a class="footer__link" href="https://crcoffeenola.com/wholesale" rel="noopener">Wholesale</a>
+        <a class="footer__link" href="https://crcoffeenola.com/news" rel="noopener">News</a>
+      </nav>
+      <nav class="footer__col" aria-label="Connect">
+        <p class="footer__heading">Connect</p>
+        <a class="footer__link" href="https://instagram.com/crcoffeeshop" rel="noopener">Instagram</a>
+        <a class="footer__link" href="https://facebook.com/CRCoffeeShop" rel="noopener">Facebook</a>
+        <a class="footer__link" href="https://www.tiktok.com/@crcoffeeshop" rel="noopener">TikTok</a>
+        <a class="footer__link" href="https://www.youtube.com/coffeewithkevin" rel="noopener">YouTube</a>
+        <a class="footer__link" href="mailto:coastroastcoffeestroch@gmail.com">coastroastcoffeestroch@gmail.com</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="js-year">2026</span> CR Coffee Shop &middot; New Orleans, Louisiana &middot; Beta preview, not the live site</p>
+      <div class="footer__legal">
+        <a class="footer__link" href="https://crcoffeenola.com/privacy" rel="noopener">Privacy Policy</a>
+        <a class="footer__link" href="https://crcoffeenola.com/accessibility" rel="noopener">Accessibility</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="/js/hero.js?v=6" defer></script>
+  <script src="/js/hero.js?v=7" defer></script>
 </body>
 </html>
