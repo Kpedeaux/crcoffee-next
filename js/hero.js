@@ -24,6 +24,56 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* Mobile nav overlay */
+  var burger = document.getElementById('nav-burger');
+  var mobileNav = document.getElementById('mobile-nav');
+  var navClose = document.getElementById('nav-close');
+  if (burger && mobileNav && navClose) {
+    function openNav() {
+      mobileNav.hidden = false;
+      document.body.classList.add('nav-open');
+      burger.setAttribute('aria-expanded', 'true');
+      navClose.focus();
+    }
+    function closeNav() {
+      mobileNav.hidden = true;
+      document.body.classList.remove('nav-open');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.focus();
+    }
+    burger.addEventListener('click', openNav);
+    navClose.addEventListener('click', closeNav);
+    mobileNav.addEventListener('click', function (e) {
+      var link = e.target.closest('.mobile-nav__link');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      if (href && href.charAt(0) === '#') {
+        /* Close first, then scroll: the default anchor scroll fires while the
+           body is still scroll-locked by the overlay and silently does nothing. */
+        e.preventDefault();
+        closeNav();
+        var target = document.querySelector(href);
+        if (target) {
+          var smooth = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+          target.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+          if (history.pushState) history.pushState(null, '', href);
+        }
+      } else {
+        closeNav();
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (mobileNav.hidden) return;
+      if (e.key === 'Escape') { closeNav(); return; }
+      if (e.key === 'Tab') { /* keep focus inside the dialog */
+        var focusables = mobileNav.querySelectorAll('a, button');
+        var first = focusables[0], last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
+
   /* Time-of-day greeting (New Orleans clock). Static fallback text stays for no-JS. */
   var greetText = document.getElementById('hero-greet-text');
   if (greetText) {
