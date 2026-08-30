@@ -1,0 +1,25 @@
+# BETA guardrail: belt-and-suspenders noindex on every response.
+# Remove the X-Robots-Tag line at launch, in the same commit as the
+# robots.txt swap and the meta tag removal.
+/*
+  X-Robots-Tag: noindex
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/font/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/video/*
+  Cache-Control: public, max-age=604800
+
+/img/*
+  Cache-Control: public, max-age=604800

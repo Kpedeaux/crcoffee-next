@@ -1,0 +1,6 @@
+# BETA SITE — blocked from all crawling until launch.
+# At launch this file is replaced with the production robots.txt
+# (allow all, named AI crawlers, sitemap line) in the same commit
+# that removes the noindex meta and the X-Robots-Tag header.
+User-agent: *
+Disallow: /

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- BETA: never indexed. Remove this meta, the _headers X-Robots-Tag, and the robots.txt disallow together at launch. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>CR Coffee Shop | Fresh Coffee, Roasted the Old Way | New Orleans</title>
+  <meta name="description" content="CR Coffee Shop roasts its own beans on antique machines and pours them at four shops around New Orleans. Order ahead or shop fresh-roasted coffee.">
+  <meta name="theme-color" content="#151210">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" fetchpriority="high">
+  <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/main.css?v=1">
+</head>
+<body>
+
+  <a class="skip-nav" href="#main">Skip to main content</a>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="header__brand" href="/" aria-label="CR Coffee Shop home">
+        <img src="/img/cr-monogram-dark.jpg" alt="" width="34" height="34" class="header__mark">
+        <span class="header__wordmark">CR&nbsp;Coffee&nbsp;Shop</span>
+      </a>
+      <nav class="header__nav" aria-label="Main">
+        <a class="header__link" href="#placeholder">Menu</a>
+        <a class="header__link" href="#placeholder">Our Coffee</a>
+        <a class="header__link" href="#placeholder">Locations</a>
+        <a class="header__link" href="#placeholder">News</a>
+      </nav>
+      <a class="btn btn--primary header__order" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="hero">
+      <div class="hero__media" aria-hidden="true">
+        <picture>
+          <source srcset="/img/hero-poster.avif" type="image/avif">
+          <source srcset="/img/hero-poster.webp" type="image/webp">
+          <img class="hero__poster" src="/img/hero-poster.jpg" alt="" width="1440" height="810" fetchpriority="high" decoding="async">
+        </picture>
+        <!-- Background video is injected by js/hero.js after load. Skipped entirely for
+             prefers-reduced-motion and Save-Data visitors; the poster stands alone. -->
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">New Orleans &middot; Est. 2015</p>
+        <h1 class="hero__title">Fresh coffee, roasted the&nbsp;old&nbsp;way.</h1>
+        <p class="hero__sub">We roast our beans on antique machines and pour them at four shops around New Orleans. Order ahead, or take home a bag.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
+          <a class="btn btn--ghost btn--lg" href="https://cr-coffee-shop.square.site/shop/at-home-coffee-and-tea/4" rel="noopener">Shop fresh beans</a>
+        </div>
+        <p class="hero__proof">As featured in The Wall Street Journal and Axios New Orleans</p>
+      </div>
+
+      <button class="hero__pause" id="hero-pause" type="button" aria-pressed="false" hidden>
+        <svg class="hero__pause-icon hero__pause-icon--pause" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><rect x="3" y="2" width="3.4" height="12" rx="1" fill="currentColor"/><rect x="9.6" y="2" width="3.4" height="12" rx="1" fill="currentColor"/></svg>
+        <svg class="hero__pause-icon hero__pause-icon--play" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4.5 2.5v11l9-5.5z" fill="currentColor"/></svg>
+        <span class="hero__pause-label">Pause video</span>
+      </button>
+    </section>
+
+    <section class="stub" id="placeholder">
+      <div class="stub__inner">
+        <p class="stub__note">Beta preview. The sections below arrive after the design round:</p>
+        <p class="stub__list">Order &middot; Fresh-roasted beans &middot; Locations &middot; Our coffee &middot; News &amp; press</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="mobile-order-bar">
+    <a class="btn btn--primary btn--bar" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
+  </div>
+
+  <footer class="footer">
+    <p class="footer__line">&copy; <span id="js-year">2026</span> CR Coffee Shop &middot; New Orleans, Louisiana &middot; Beta preview, not the live site</p>
+  </footer>
+
+  <script src="/js/hero.js?v=1" defer></script>
+</body>
+</html>
