@@ -10,7 +10,8 @@
   <meta name="theme-color" content="#151210">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/hero-poster-portrait.avif" type="image/avif" media="(orientation: portrait)" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" media="(orientation: landscape)" fetchpriority="high">
   <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/main.css?v=1">
@@ -40,9 +41,11 @@
     <section class="hero" id="hero">
       <div class="hero__media" aria-hidden="true">
         <picture>
+          <source srcset="/img/hero-poster-portrait.avif" type="image/avif" media="(orientation: portrait)">
+          <source srcset="/img/hero-poster-portrait.webp" type="image/webp" media="(orientation: portrait)">
           <source srcset="/img/hero-poster.avif" type="image/avif">
           <source srcset="/img/hero-poster.webp" type="image/webp">
-          <img class="hero__poster" src="/img/hero-poster.jpg" alt="" width="1440" height="810" fetchpriority="high" decoding="async">
+          <img class="hero__poster" src="/img/hero-poster.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
         </picture>
         <!-- Background video is injected by js/hero.js after load. Skipped entirely for
              prefers-reduced-motion and Save-Data visitors; the poster stands alone. -->
@@ -84,6 +87,6 @@
     <p class="footer__line">&copy; <span id="js-year">2026</span> CR Coffee Shop &middot; New Orleans, Louisiana &middot; Beta preview, not the live site</p>
   </footer>
 
-  <script src="/js/hero.js?v=2" defer></script>
+  <script src="/js/hero.js?v=3" defer></script>
 </body>
 </html>

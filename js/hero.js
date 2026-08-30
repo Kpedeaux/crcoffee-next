@@ -46,10 +46,11 @@
     video.setAttribute('playsinline', '');
     video.setAttribute('aria-hidden', 'true');
     video.preload = 'auto';
-    /* Bump ?v= on every recut: /video/* is browser-cached for a week under the same URL. */
-    video.src = window.matchMedia('(min-width: 900px)').matches
-      ? '/video/hero-loop-1440.mp4?v=2'
-      : '/video/hero-loop-960.mp4?v=2';
+    /* Bump ?v= on every recut. Portrait screens get a dedicated 9:16 crop
+       encoded from the 4K master; landscape gets the full-frame 1080p. */
+    video.src = window.matchMedia('(orientation: portrait)').matches
+      ? '/video/hero-loop-portrait.mp4?v=3'
+      : '/video/hero-loop-1920.mp4?v=3';
 
     video.addEventListener('playing', function () {
       video.classList.add('is-playing');
