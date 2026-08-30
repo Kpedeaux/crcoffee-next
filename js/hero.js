@@ -47,10 +47,14 @@
     video.setAttribute('aria-hidden', 'true');
     video.preload = 'auto';
     /* Bump ?v= on every recut. Portrait screens get a dedicated 9:16 crop
-       encoded from the 4K master; landscape gets the full-frame 1080p. */
-    video.src = window.matchMedia('(orientation: portrait)').matches
-      ? '/video/hero-loop-portrait.mp4?v=3'
-      : '/video/hero-loop-1920.mp4?v=3';
+       encoded from the 4K master; landscape gets the full-frame 1080p.
+       Browsers that decode AV1 (all modern ones) get the 10-bit AV1
+       encodes: cleaner dark gradients, native-resolution portrait. */
+    var canAV1 = video.canPlayType('video/mp4; codecs="av01.0.08M.10"') !== '';
+    var portrait = window.matchMedia('(orientation: portrait)').matches;
+    video.src = portrait
+      ? (canAV1 ? '/video/hero-loop-portrait-2160.av1.mp4?v=4' : '/video/hero-loop-portrait.mp4?v=4')
+      : (canAV1 ? '/video/hero-loop-1920.av1.mp4?v=4' : '/video/hero-loop-1920.mp4?v=4');
 
     video.addEventListener('playing', function () {
       video.classList.add('is-playing');
