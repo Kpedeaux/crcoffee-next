@@ -37,6 +37,8 @@ While this site is in beta it must never be indexed:
 
 ## At launch, don't forget
 
+- Swap the beta no-cache block in `_headers` for the production caching policy (see the comment in that file). The `?v=` version-tag discipline on css/js/video references is what makes the immutable policy safe.
+
 - Redirect map: the old site's inbound URLs (news articles, blend pages, location pages, /order, /bayou-beast) must resolve on the new site or 301 to their replacements. Keep the `/product/*` and `/shop/*` 410 functions behavior.
 - Crescent Room URLs need a decision (redirect to homepage or a farewell note).
 - Reuse the existing GA4 property; verify timezone America/Chicago and 14-month retention.
