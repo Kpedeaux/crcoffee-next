@@ -1,0 +1,43 @@
+# Enforce LF line endings for all text files across the repo.
+# This prevents editors (especially on Windows) from silently
+# reintroducing CRLF and creating noisy, content-free diffs.
+
+# Default: treat files as text and normalize to LF on commit + checkout.
+* text=auto eol=lf
+
+# Web / source files — always LF.
+*.html   text eol=lf
+*.htm    text eol=lf
+*.css    text eol=lf
+*.js     text eol=lf
+*.mjs    text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+*.txt    text eol=lf
+*.xml    text eol=lf
+*.svg    text eol=lf
+*.py     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.toml   text eol=lf
+
+# Files with no extension that are still text (e.g. _redirects, _headers).
+_redirects text eol=lf
+_headers   text eol=lf
+
+# Binary assets — never modify line endings or diff as text.
+*.jpg    binary
+*.jpeg   binary
+*.png    binary
+*.gif    binary
+*.webp   binary
+*.ico    binary
+*.mp4    binary
+*.mov    binary
+*.webm   binary
+*.woff   binary
+*.woff2  binary
+*.ttf    binary
+*.eot    binary
+*.otf    binary
+*.pdf    binary
