@@ -46,9 +46,10 @@
     video.setAttribute('playsinline', '');
     video.setAttribute('aria-hidden', 'true');
     video.preload = 'auto';
+    /* Bump ?v= on every recut: /video/* is browser-cached for a week under the same URL. */
     video.src = window.matchMedia('(min-width: 900px)').matches
-      ? '/video/hero-loop-1440.mp4'
-      : '/video/hero-loop-960.mp4';
+      ? '/video/hero-loop-1440.mp4?v=2'
+      : '/video/hero-loop-960.mp4?v=2';
 
     video.addEventListener('playing', function () {
       video.classList.add('is-playing');
