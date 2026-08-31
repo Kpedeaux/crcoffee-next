@@ -43,4 +43,5 @@ While this site is in beta it must never be indexed:
 - Crescent Room URLs need a decision (redirect to homepage or a farewell note).
 - Reuse the existing GA4 property; verify timezone America/Chicago and 14-month retention.
 - Re-point the production Cloudflare Pages project (or swap repos) per the deploy plan.
-- GSC: submit new sitemap, watch coverage.
+- GSC: submit new sitemap, watch coverage. Also Bing Webmaster Tools + IndexNow (ChatGPT rides Bing's index).
+- Quality pass (per web-design skill principle 59): submit every form and confirm it arrives at its real destination; every page has a unique title + meta description; run `scripts/validate-schema.js` (once ported) with zero errors; confirm domain/redirect/regional config on Cloudflare; swap all interim absolute links (crcoffeenola.com/...) to relative paths; walk the whole site on an actual phone.

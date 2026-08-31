@@ -39,6 +39,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img, video { max-width: 100%; display: block; }
+h1, h2, h3 { text-wrap: balance; } /* no widowed words in headings */
 
 /* ---- Accessibility baseline ---------------------------------------------- */
 .skip-nav {
