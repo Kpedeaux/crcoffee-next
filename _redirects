@@ -1,0 +1,41 @@
+# CR Coffee next-site redirect map (launch-ready; also active on test).
+# RULE: never redirect FROM a path that exists as an .html file here (loop risk).
+# Targets use extensionless pretty URLs so legacy paths resolve in one hop.
+
+# Carried over from the live site
+/menu                     /drinks          301
+/menu/                    /drinks          301
+/blog                     /news            301
+/blog/                    /news            301
+/coffee-brewing-gear-links /gear           301
+/loyalty-program          /rewards         301
+/loyalty-program/         /rewards         301
+
+# Locations index now lives on the homepage strip
+/locations                /#locations      301
+/locations/               /#locations      301
+/locations/new-orleans    /#locations      301
+/locations/new-orleans/   /#locations      301
+
+# Why CR Coffee merged into About (2026-08-31 architecture decision)
+/why-cr-coffee            /about           301
+/why-cr-coffee/           /about           301
+
+# Press merged into News
+/press                    /news            301
+/press/                   /news            301
+
+# Crescent Room dropped; closest topical match is the Magazine Street page
+/events                   /magazine-street 301
+/events/                  /magazine-street 301
+/crescent-room            /magazine-street 301
+/crescent-room/           /magazine-street 301
+/crescent-room-at-cr      /magazine-street 301
+/crescent-room-at-cr/     /magazine-street 301
+/s/appointments           /magazine-street 301
+
+# Drink detail pages folded into the menu (anchors exist on /drinks)
+/cold-brew-cubano         /drinks#cold-brew-cubano 301
+/cafe-au-lait             /drinks#cafe-au-lait 301
+/sweet-vanilla-cream-cold-brew /drinks#sweet-vanilla-cream-cold-brew 301
+/bayou-beast              /drinks          301

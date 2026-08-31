@@ -15,10 +15,13 @@
   var hero = document.getElementById('hero');
   function onScroll() {
     if (header) header.classList.toggle('header--solid', window.scrollY > 24);
-    /* Sticky order bar joins once the hero (and its CTA) is mostly gone */
-    if (orderBar && hero) {
-      var heroBottom = hero.getBoundingClientRect().bottom;
-      orderBar.classList.toggle('is-visible', heroBottom < window.innerHeight * 0.45);
+    /* Sticky order bar joins once the hero (and its CTA) is mostly gone.
+       Inner pages have no hero: show it after a screen of scroll. */
+    if (orderBar) {
+      var show = hero
+        ? hero.getBoundingClientRect().bottom < window.innerHeight * 0.45
+        : window.scrollY > window.innerHeight * 0.8;
+      orderBar.classList.toggle('is-visible', show);
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -73,6 +76,23 @@
       }
     });
   }
+
+  /* Click-to-play video facade: the YouTube player loads only on demand */
+  document.querySelectorAll('.film__facade[data-yt]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var band = btn.closest('.film');
+      var frame = document.createElement('div');
+      frame.className = 'film__frame';
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      iframe.title = btn.getAttribute('data-yt-title') || 'Video';
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+      iframe.setAttribute('allowfullscreen', '');
+      frame.appendChild(iframe);
+      band.appendChild(frame);
+      band.classList.add('is-playing');
+    }, { once: true });
+  });
 
   /* Live open/closed chips on the location strip */
   function fmtHour(h) {
