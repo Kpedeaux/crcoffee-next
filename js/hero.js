@@ -74,25 +74,6 @@
     });
   }
 
-  /* Time-of-day greeting (New Orleans clock). Static fallback text stays for no-JS. */
-  var greetText = document.getElementById('hero-greet-text');
-  if (greetText) {
-    try {
-      var nolaHour = parseInt(new Intl.DateTimeFormat('en-US', {
-        timeZone: 'America/Chicago', hour: 'numeric', hour12: false
-      }).format(new Date()), 10);
-      if (nolaHour >= 5 && nolaHour < 11) {
-        greetText.textContent = 'Good morning. The roaster’s been on since five.';
-      } else if (nolaHour >= 11 && nolaHour < 16) {
-        greetText.textContent = 'Good afternoon. The cold brew steeped 18 hours for this.';
-      } else if (nolaHour >= 16 && nolaHour < 19) {
-        greetText.textContent = 'Good evening. Open until 7 on Magazine Street.';
-      } else {
-        greetText.textContent = 'Good evening. First pour tomorrow is at 6am.';
-      }
-    } catch (e) { /* fallback text stands */ }
-  }
-
   /* Live open/closed chips on the location strip */
   function fmtHour(h) {
     if (h === 12) return 'noon';
