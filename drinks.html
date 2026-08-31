@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#151210">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="stylesheet" href="/css/main.css?v=7">
+  <link rel="stylesheet" href="/css/main.css?v=8">
 </head>
 <body>
 
@@ -58,7 +58,14 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero page-hero--film">
+      <div class="page-hero__media" aria-hidden="true">
+        <picture>
+          <source srcset="/img/hero-latte-pour.webp" type="image/webp">
+          <img src="/img/hero-latte-pour.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="page-hero__scrim"></div>
+      </div>
       <div class="page-hero__inner">
         <p class="kicker">Menu</p>
         <h1 class="page-hero__title">Our drinks.</h1>
