@@ -58,7 +58,14 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero page-hero--film">
+      <div class="page-hero__media" aria-hidden="true">
+        <picture>
+          <source srcset="/img/hero-plaza.webp" type="image/webp">
+          <img src="/img/hero-plaza.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="page-hero__scrim"></div>
+      </div>
       <div class="page-hero__inner">
         <p class="kicker">Old Metairie</p>
         <h1 class="page-hero__title">Metairie Road</h1>
@@ -113,6 +120,18 @@
         <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1.8rem;">
           <a class="btn btn--primary" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
           <span style="font-size: 0.82rem; color: rgba(250,248,245,0.55);">Skip the line. Pick up at the counter.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad reveal" style="padding-top: 0;" aria-label="Photos">
+      <div class="section-inner">
+        <div class="photogrid">
+          <img src="/img/metairie-dusk-exterior.jpg" alt="Metairie storefront at dusk" width="450" height="800" loading="lazy" decoding="async">
+          <img src="/img/metairie-night-window.jpg" alt="Evening view through the window at CR Coffee Old Metairie" width="450" height="800" loading="lazy" decoding="async">
+          <img src="/img/metairie-storefront-detail.jpg" alt="CR Coffee Old Metairie storefront detail on Metairie Road" width="450" height="800" loading="lazy" decoding="async">
+          <img src="/img/metairie-tumbler-held.jpg" alt="CR Coffee tumbler held outside the Old Metairie shop" width="450" height="800" loading="lazy" decoding="async">
+          <img src="/img/metairie-window-art.jpg" alt="Window art display at CR Coffee Old Metairie" width="800" height="450" loading="lazy" decoding="async">
         </div>
       </div>
     </section>

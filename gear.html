@@ -58,7 +58,14 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero page-hero--film">
+      <div class="page-hero__media" aria-hidden="true">
+        <picture>
+          <source srcset="/img/hero-pourover.webp" type="image/webp">
+          <img src="/img/hero-pourover.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="page-hero__scrim"></div>
+      </div>
       <div class="page-hero__inner">
         <p class="kicker">Kevin&#39;s Picks</p>
         <h1 class="page-hero__title">Home coffee brewing gear.</h1>
@@ -74,11 +81,17 @@
     </section>
 
     <section class="section-pad" style="padding-bottom: 0;" aria-label="Fox 8 feature">
-      <div class="section-inner">
-        <div style="border: 1px solid rgba(250, 248, 245, 0.18); border-radius: 8px; background: #151210; padding: clamp(1.75rem, 4vw, 2.75rem); display: flex; flex-direction: column; gap: 0.9rem; align-items: flex-start;">
+      <div class="split">
+        <div class="split__media">
+          <picture>
+            <source srcset="/img/hero-chemex.webp" type="image/webp">
+            <img src="/img/hero-chemex.jpg" alt="Chemex pour into a Coast Roast mug" width="1000" height="1500" loading="lazy" decoding="async" style="max-width: 400px; margin: 0 auto;">
+          </picture>
+        </div>
+        <div class="split__text">
           <p class="kicker">As seen on Fox 8</p>
-          <p style="font-size: 0.98rem; line-height: 1.65; color: rgba(250, 248, 245, 0.72); max-width: 46rem;">I took my home brewing setup down to the Fox 8 Kitchen and walked anchor Rob Krieger through the four rules for better coffee at home. Every piece of gear from the segment is the same stuff below, with links to all of it.</p>
-          <a class="xindex__watch" style="margin-top: 0;" href="https://www.fox8live.com/video/2026/07/09/fox-8-kitchen-tips-coffee-brewing-home/" target="_blank" rel="noopener">Watch the Fox 8 segment &rarr;</a>
+          <p class="split__body">I took my home brewing setup down to the Fox 8 Kitchen and walked anchor Rob Krieger through the four rules for better coffee at home. Every piece of gear from the segment is the same stuff below, with links to all of it.</p>
+          <a class="xindex__watch" href="https://www.fox8live.com/video/2026/07/09/fox-8-kitchen-tips-coffee-brewing-home/" target="_blank" rel="noopener">Watch the Fox 8 segment &rarr;</a>
         </div>
       </div>
     </section>

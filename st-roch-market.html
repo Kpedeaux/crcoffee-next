@@ -58,7 +58,14 @@
 
   <main id="main">
 
-    <section class="page-hero">
+    <section class="page-hero page-hero--film">
+      <div class="page-hero__media" aria-hidden="true">
+        <picture>
+          <source srcset="/img/hero-stroch-sign.webp" type="image/webp">
+          <img src="/img/hero-stroch-sign.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="page-hero__scrim"></div>
+      </div>
       <div class="page-hero__inner">
         <p class="kicker">St. Claude &middot; Where It Started</p>
         <h1 class="page-hero__title">St. Roch Market</h1>
@@ -113,6 +120,18 @@
         <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1.8rem;">
           <a class="btn btn--primary" href="https://cr-coffee-shop-st-roch.square.site/" rel="noopener">Order ahead</a>
           <span style="font-size: 0.82rem; color: rgba(250,248,245,0.55);">This stall takes orders through its own store.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad reveal" style="padding-top: 0;" aria-label="Photos">
+      <div class="section-inner">
+        <div class="photogrid">
+          <img src="/img/stroch-counter-products.jpg" alt="Coffee products on counter display" width="800" height="450" loading="lazy" decoding="async">
+          <img src="/img/stroch-mug-counter.jpg" alt="CR Coffee mug on the counter at St. Roch Market, New Orleans" width="450" height="800" loading="lazy" decoding="async">
+          <img src="/img/stroch-mug-dusk.jpg" alt="CR Coffee mug at dusk at the St. Roch Market stall" width="450" height="800" loading="lazy" decoding="async">
+          <img src="/img/stroch-two-mugs.jpg" alt="Two CR Coffee mugs stacked at the St. Roch Market stall" width="800" height="450" loading="lazy" decoding="async">
+          <img src="/img/stroch-counter-display.jpg" alt="Full counter display at St. Roch Market" width="600" height="800" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
