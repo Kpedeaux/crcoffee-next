@@ -373,6 +373,14 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .photorow__fig { position: relative; margin: 0; border-radius: 6px; overflow: hidden; border: 1px solid rgba(250, 248, 245, 0.16); }
 .photorow__fig img { width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
 .photorow--tall .photorow__fig img { aspect-ratio: 4 / 5; }
+/* Hover-swap drink cells: second photo of the same drink fades in on hover/keyboard focus */
+.photorow__link { display: block; position: relative; height: 100%; }
+.photorow__fig--swap .photorow__altpic { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity 0.45s ease; }
+.photorow__fig--swap .photorow__altpic img { height: 100%; }
+.photorow__fig--swap:hover .photorow__altpic,
+.photorow__fig--swap:focus-within .photorow__altpic { opacity: 1; }
+.photorow__cap { pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .photorow__fig--swap .photorow__altpic { transition: none; } }
 .photorow__cap {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
   padding: 1.1rem 0.75rem 0.55rem;

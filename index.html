@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" media="(orientation: landscape)" fetchpriority="high">
   <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=12">
+  <link rel="stylesheet" href="/css/main.css?v=13">
 </head>
 <body>
 
@@ -188,26 +188,43 @@
         <p class="kicker" style="margin-bottom: 0.6rem;">The menu</p>
         <h2 class="section-title" style="margin-bottom: 2rem;">What we&#39;re pouring.</h2>
         <div class="photorow photorow--tall">
-          <figure class="photorow__fig">
-            <picture>
-              <source srcset="/img/drinks-cream-float.webp" type="image/webp">
-              <img src="/img/drinks-cream-float.jpg" alt="Sweet Vanilla Cream Cold Brew, vanilla cream marbling into cold brew in a CR glass" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 40%;">
-            </picture>
+          <figure class="photorow__fig photorow__fig--swap">
+            <a class="photorow__link" href="/drinks#sweet-vanilla-cream-cold-brew" rel="noopener" aria-label="Sweet Vanilla Cream Cold Brew, on the menu">
+              <picture>
+                <source srcset="/img/drinks-cream-float.webp" type="image/webp">
+                <img src="/img/drinks-cream-float.jpg" alt="Sweet Vanilla Cream Cold Brew, vanilla cream marbling into cold brew in a CR glass" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 40%;">
+              </picture>
+              <picture class="photorow__altpic" aria-hidden="true">
+                <source srcset="/img/drinks-vanilla-glass.webp" type="image/webp">
+                <img src="/img/drinks-vanilla-glass.jpg" alt="" width="795" height="1181" loading="lazy" decoding="async">
+              </picture>
+            </a>
             <figcaption class="photorow__cap"><span>Sweet Vanilla Cream Cold Brew</span></figcaption>
           </figure>
-          <figure class="photorow__fig">
-            <picture>
-              <source srcset="/img/drinks-milk-pour.webp" type="image/webp">
-              <img src="/img/drinks-milk-pour.jpg" alt="Steamed milk pouring into a cafe au lait" width="1920" height="1280" loading="lazy" decoding="async">
-            </picture>
-            <figcaption class="photorow__cap"><span>Caf&eacute; au Lait</span></figcaption>
-          </figure>
-          <figure class="photorow__fig">
-            <picture>
-              <source srcset="/img/drinks-latte-fern.webp" type="image/webp">
-              <img src="/img/drinks-latte-fern.jpg" alt="A fern poured in the milk foam of a latte" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 45%;">
-            </picture>
+          <figure class="photorow__fig photorow__fig--swap">
+            <a class="photorow__link" href="/drinks#espresso-drinks" rel="noopener" aria-label="Latte, on the menu">
+              <picture>
+                <source srcset="/img/drinks-milk-pour.webp" type="image/webp">
+                <img src="/img/drinks-milk-pour.jpg" alt="Steamed milk pouring into a latte" width="1920" height="1280" loading="lazy" decoding="async">
+              </picture>
+              <picture class="photorow__altpic" aria-hidden="true">
+                <source srcset="/img/drinks-latte-fern.webp" type="image/webp">
+                <img src="/img/drinks-latte-fern.jpg" alt="" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 45%;">
+              </picture>
+            </a>
             <figcaption class="photorow__cap"><span>Latte</span></figcaption>
+          </figure>
+          <figure class="photorow__fig photorow__fig--swap">
+            <a class="photorow__link" href="/drinks#chocolate-covered-espresso-bean-frozen" rel="noopener" aria-label="Chocolate-Covered Espresso Bean Frozen, on the menu">
+              <picture>
+                <source srcset="/img/drinks-frozen-pair.webp" type="image/webp">
+                <img src="/img/drinks-frozen-pair.jpg" alt="Two Chocolate-Covered Espresso Bean Frozens on the counter" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 60%;">
+              </picture>
+              <picture class="photorow__altpic" aria-hidden="true">
+                <img src="/img/chocolate-covered-espresso-bean-frozen-card.jpg" alt="" width="600" height="600" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <figcaption class="photorow__cap"><span>Chocolate-Covered Espresso Bean Frozen</span></figcaption>
           </figure>
         </div>
         <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1.8rem;">
