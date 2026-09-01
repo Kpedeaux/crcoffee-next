@@ -37,7 +37,7 @@ While this site is in beta it must never be indexed:
 
 ## At launch, don't forget
 
-- The /coffee film embed needs `frame-src https://www.youtube-nocookie.com` when the production CSP is added to `_headers` (the beta has no CSP).
+- The /coffee film embed needs `frame-src https://www.youtube-nocookie.com` when the production CSP is added to `_headers` (the beta has no CSP). The four location pages also embed Google Maps, so the same CSP needs `frame-src https://www.google.com` alongside it.
 - Re-point Cloudflare zone/GSC as planned; `_redirects` here is already launch-ready (why-cr-coffee → about, press → news, Crescent Room paths → magazine-street, drink pages → menu anchors).
 - OPEN QUESTION for Kevin: `/bayou-beast` currently 301s to /drinks; if the Beast returns in 2027, resurrect a landing page at that path instead.
 

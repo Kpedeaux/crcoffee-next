@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" media="(orientation: landscape)" fetchpriority="high">
   <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=8">
+  <link rel="stylesheet" href="/css/main.css?v=9">
 </head>
 <body>
 
@@ -28,7 +28,7 @@
       </a>
       <nav class="header__nav" aria-label="Main">
         <a class="header__link" href="/drinks" rel="noopener">Menu</a>
-        <a class="header__link" href="#roaster">Our Coffee</a>
+        <a class="header__link" href="/coffee" rel="noopener">Our Coffee</a>
         <a class="header__link" href="#locations">Locations</a>
         <a class="header__link" href="#news">News</a>
       </nav>
@@ -50,7 +50,7 @@
     </div>
     <nav class="mobile-nav__links" aria-label="Mobile">
       <a class="mobile-nav__link" href="/drinks" rel="noopener">Menu</a>
-      <a class="mobile-nav__link" href="#roaster">Our Coffee</a>
+      <a class="mobile-nav__link" href="/coffee" rel="noopener">Our Coffee</a>
       <a class="mobile-nav__link" href="#locations">Locations</a>
       <a class="mobile-nav__link" href="#news">News</a>
       <a class="mobile-nav__link" href="/about" rel="noopener">About</a>
@@ -128,7 +128,7 @@
           </picture>
         </div>
         <div class="beans__list">
-          <h2 class="section-title">Five blends, roasted here.</h2>
+          <h2 class="section-title">Five blends, roasted fresh.</h2>
           <ul class="blend-index">
             <li class="blend-index__row">
               <span class="blend-index__name">Streetcar Blend</span>
@@ -159,7 +159,7 @@
       </div>
     </section>
 
-    <section class="roaster reveal" id="roaster" aria-label="The Royal No. 6 roaster">
+    <section class="roaster reveal" id="roaster" aria-label="From the port to your cup">
       <div class="roaster__media" aria-hidden="true">
         <picture>
           <source srcset="/img/flames-band.webp" type="image/webp">
@@ -173,10 +173,33 @@
           <img class="roaster__plate" src="/img/royal-plate.jpg" alt="The ornate Royal No. 6 nameplate on the antique roaster" width="680" height="385" loading="lazy" decoding="async">
         </picture>
         <h2 class="section-title">Meet the Royal No. 6.</h2>
-        <p class="roaster__body">Our roasters were built a century ago, cast iron and open flame. We have roasted on machines like this since 2009, in small batches, by hand and by ear.</p>
+        <p class="roaster__body">Our two Royal No. 6 roasters were built in the 1910s, cast iron and open flame. Green coffee comes up through the Port of New Orleans, and every batch is roasted slow, by hand and by ear, the way it was done a century ago. It reaches our shops the same week it leaves the drum.</p>
+        <div class="photorow roaster__journey">
+          <figure class="photorow__fig">
+            <picture>
+              <source srcset="/img/hero-forklift.webp" type="image/webp">
+              <img src="/img/hero-forklift.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async" style="object-position: 65% 50%;">
+            </picture>
+            <figcaption class="photorow__cap">The port warehouses</figcaption>
+          </figure>
+          <figure class="photorow__fig">
+            <picture>
+              <source srcset="/img/hero-beans-cooler.webp" type="image/webp">
+              <img src="/img/hero-beans-cooler.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+            </picture>
+            <figcaption class="photorow__cap">Out of the drum</figcaption>
+          </figure>
+          <figure class="photorow__fig">
+            <picture>
+              <source srcset="/img/hero-crema.webp" type="image/webp">
+              <img src="/img/hero-crema.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async">
+            </picture>
+            <figcaption class="photorow__cap">Pulled fresh at the shop</figcaption>
+          </figure>
+        </div>
         <div class="roaster__cta">
-          <a class="btn btn--ghost" href="/coffee" rel="noopener">Our coffee</a>
-          <span class="roaster__tag">Roasted in New Orleans</span>
+          <a class="btn btn--ghost" href="/coffee" rel="noopener">See how your coffee gets to your cup</a>
+          <span class="roaster__tag">Some of the only century-old roasters still working in America</span>
         </div>
       </div>
     </section>
@@ -217,6 +240,47 @@
           <p class="news-card__date">July 2026</p>
           <h3 class="news-card__title">The Bayou Beast Made the News</h3>
         </a>
+      </div>
+    </section>
+
+    <section class="section-pad reveal" id="faq" aria-label="Frequently asked questions">
+      <div class="section-inner">
+        <p class="kicker" style="margin-bottom: 0.6rem;">Good to know</p>
+        <h2 class="section-title" style="margin-bottom: 1.6rem;">Frequently asked questions.</h2>
+        <div class="faq-fold">
+          <details class="faq-fold__item">
+            <summary><span>What time does CR Coffee open?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">Magazine Street is open daily from 6am to 7pm. St. Roch Market pours daily from 7am to 7pm. Metairie Road opens weekdays 6am to 6pm and weekends 7am to 6pm. Hours at the MSY Airport kiosk vary by terminal.</p>
+          </details>
+          <details class="faq-fold__item">
+            <summary><span>Can I order ahead online?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">Yes. Order through our Square store and your drink is ready at the counter when you walk in at Magazine Street or Old Metairie. St. Roch Market takes orders through its own store, linked on that location&#39;s page.</p>
+          </details>
+          <details class="faq-fold__item">
+            <summary><span>Does CR Coffee have Wi-Fi and seating for laptops?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">Yes. Magazine Street has fast Wi-Fi, indoor seating with a fireplace lounge, and a shaded side patio, about ten minutes from Tulane and Loyola.</p>
+          </details>
+          <details class="faq-fold__item">
+            <summary><span>Is CR Coffee dog friendly?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">Yes. Magazine Street has a dog-friendly courtyard with outdoor seating and a covered porch.</p>
+          </details>
+          <details class="faq-fold__item">
+            <summary><span>Do you have oat milk or almond milk?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">Yes. Any drink made with milk, from lattes to chai, can be made with whole, skim, oat, or almond milk.</p>
+          </details>
+          <details class="faq-fold__item">
+            <summary><span>Where can I buy CR Coffee beans?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">All five blends are $19.75 for a 12 ounce bag, whole bean or ground. Pick up a bag at the counter, or order online and we ship anywhere in the U.S., roasted close to the ship date.</p>
+          </details>
+          <details class="faq-fold__item">
+            <summary><span>Does CR Coffee sell gift cards?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">Yes. Digital CR Coffee gift cards are available online and deliver by email, for birthdays, holidays, or just because.</p>
+          </details>
+          <details class="faq-fold__item">
+            <summary><span>Does CR Coffee have a rewards program?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">Yes. CR Coffee Rewards earns 1 Bean for every dollar at Magazine Street and Old Metairie, and 100 Beans earns a free drink. No app and no card. Give your name or phone number at the register and you are enrolled.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -274,6 +338,57 @@
       </div>
     </div>
   </footer>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://crcoffeenola.com/#organization","name":"CR Coffee Shop","url":"https://crcoffeenola.com/","email":"coastroastcoffeestroch@gmail.com","sameAs":["https://instagram.com/crcoffeeshop","https://facebook.com/CRCoffeeShop","https://www.tiktok.com/@crcoffeeshop","https://www.youtube.com/coffeewithkevin"]}</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What time does CR Coffee open?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Magazine Street is open daily from 6am to 7pm. St. Roch Market pours daily from 7am to 7pm. Metairie Road opens weekdays 6am to 6pm and weekends 7am to 6pm. Hours at the MSY Airport kiosk vary by terminal." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I order ahead online?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Order through our Square store and your drink is ready at the counter when you walk in at Magazine Street or Old Metairie. St. Roch Market takes orders through its own store, linked on that location's page." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does CR Coffee have Wi-Fi and seating for laptops?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Magazine Street has fast Wi-Fi, indoor seating with a fireplace lounge, and a shaded side patio, about ten minutes from Tulane and Loyola." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is CR Coffee dog friendly?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Magazine Street has a dog-friendly courtyard with outdoor seating and a covered porch." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you have oat milk or almond milk?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Any drink made with milk, from lattes to chai, can be made with whole, skim, oat, or almond milk." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I buy CR Coffee beans?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All five blends are $19.75 for a 12 ounce bag, whole bean or ground. Pick up a bag at the counter, or order online and we ship anywhere in the U.S., roasted close to the ship date." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does CR Coffee sell gift cards?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Digital CR Coffee gift cards are available online and deliver by email, for birthdays, holidays, or just because." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does CR Coffee have a rewards program?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. CR Coffee Rewards earns 1 Bean for every dollar at Magazine Street and Old Metairie, and 100 Beans earns a free drink. No app and no card. Give your name or phone number at the register and you are enrolled." }
+      }
+    ]
+  }
+  </script>
 
   <script src="/js/hero.js?v=10" defer></script>
 </body>

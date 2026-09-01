@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#151210">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="stylesheet" href="/css/main.css?v=8">
+  <link rel="stylesheet" href="/css/main.css?v=9">
 </head>
 <body>
 
@@ -76,7 +76,10 @@
     <section class="section-pad reveal" aria-label="The market stall">
       <div class="split">
         <div class="split__media">
-          <img src="/img/stroch-counter-display.jpg" alt="St. Roch Market counter with coffee display" width="600" height="400" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="/img/stroch-stall-counter.webp" type="image/webp">
+            <img src="/img/stroch-stall-counter.jpg" alt="Customers at the CR counter inside St. Roch Market, decorated for Carnival" width="1600" height="1066" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="split__text">
           <p class="kicker">The market stall</p>
@@ -121,8 +124,21 @@
           <a class="btn btn--primary" href="https://cr-coffee-shop-st-roch.square.site/" rel="noopener">Order ahead</a>
           <span style="font-size: 0.82rem; color: rgba(250,248,245,0.55);">This stall takes orders through its own store.</span>
         </div>
+        <div class="map-embed" style="margin-top: 1.8rem;">
+          <iframe src="https://www.google.com/maps?q=St.+Roch+Market,+2381+St+Claude+Ave,+New+Orleans,+LA+70117&output=embed" title="Map to St. Roch Market, 2381 St Claude Avenue, New Orleans" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
+
+    <div class="imageband reveal" role="img" aria-label="St. Roch Market lit up at night with patio umbrellas and string lights">
+      <div class="imageband__media">
+        <picture>
+          <source srcset="/img/stroch-night-open.webp" type="image/webp">
+          <img src="/img/stroch-night-open.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async" style="object-position: 50% 35%;">
+        </picture>
+      </div>
+      <p class="imageband__caption">The market at night, St. Claude Avenue</p>
+    </div>
 
     <section class="section-pad reveal" style="padding-top: 0;" aria-label="Photos">
       <div class="section-inner">
@@ -238,7 +254,11 @@
     "alternateName": "CR Coffee St. Roch Market",
     "description": "CR Coffee Shop's original location inside St. Roch Market on St. Claude Avenue in New Orleans. The first CR Coffee shop, open since 2015. Serving Coast Roast Coffee roasted on antique 1910s drum roasters.",
     "url": "https://crcoffeenola.com/st-roch-market",
-    "image": "https://crcoffeenola.com/img/stroch-exterior-hero.jpg",
+    "image": [
+      "https://crcoffeenola.com/img/stroch-night-open.jpg",
+      "https://crcoffeenola.com/img/hero-stroch-sign.jpg",
+      "https://crcoffeenola.com/img/stroch-stall-counter.jpg"
+    ],
     "telephone": "+15042670388",
     "address": {
       "@type": "PostalAddress",

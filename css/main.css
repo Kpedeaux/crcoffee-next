@@ -328,8 +328,25 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 }
 .roaster__plate { width: min(240px, 60vw); height: auto; border-radius: 4px; border: 1px solid rgba(250, 248, 245, 0.22); }
 .roaster__body { font-size: 1.02rem; line-height: 1.7; color: rgba(250, 248, 245, 0.85); max-width: 34rem; }
-.roaster__cta { display: flex; align-items: center; gap: 1rem; margin-top: 0.3rem; }
+.roaster__cta { display: flex; align-items: center; gap: 1rem; margin-top: 0.3rem; flex-wrap: wrap; }
 .roaster__tag { font-size: 0.82rem; color: rgba(250, 248, 245, 0.55); }
+
+/* Captioned photo strip: the port-to-cup journey on the homepage, menu moments on /drinks */
+.photorow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; width: 100%; }
+.photorow__fig { position: relative; margin: 0; border-radius: 6px; overflow: hidden; border: 1px solid rgba(250, 248, 245, 0.16); }
+.photorow__fig img { width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+.photorow__cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  padding: 1.1rem 0.75rem 0.55rem;
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase;
+  color: rgba(250, 248, 245, 0.85);
+  background: linear-gradient(to top, rgba(10, 8, 6, 0.78), rgba(10, 8, 6, 0));
+}
+.roaster__journey { max-width: 46rem; margin-top: 0.5rem; }
+@media (max-width: 640px) {
+  .photorow { gap: 0.5rem; }
+  .photorow__cap { font-size: 0.56rem; letter-spacing: 0.08em; padding: 0.8rem 0.5rem 0.4rem; }
+}
 
 /* ---- Find your roast ----------------------------------------------------------------- */
 .finder { padding: clamp(4.5rem, 10vh, 7rem) var(--pad); }
@@ -536,6 +553,35 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 @media (max-width: 860px) { .split, .split--flip { flex-direction: column; align-items: stretch; } .split__media { flex: none; } }
 
 /* FAQ answer blocks (visible, crawlable) */
+/* Embedded Google map, tinted to sit inside the dark theme */
+.map-embed {
+  position: relative; overflow: hidden;
+  border-radius: 6px; border: 1px solid rgba(250, 248, 245, 0.16);
+  aspect-ratio: 16 / 7; background: #0c0a08;
+}
+.map-embed iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+  filter: invert(0.9) hue-rotate(180deg) saturate(0.55) brightness(0.95) contrast(0.92);
+}
+@media (max-width: 640px) { .map-embed { aspect-ratio: 4 / 3; } }
+
+/* Fold-down FAQ accordion (homepage) */
+.faq-fold { border-top: 1px solid rgba(250, 248, 245, 0.15); }
+.faq-fold__item { border-bottom: 1px solid rgba(250, 248, 245, 0.15); }
+.faq-fold__item summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  cursor: pointer; padding: 1.15rem 0; list-style: none;
+  font-size: 1.05rem; font-weight: 600; color: var(--cream);
+  transition: color 0.2s ease;
+}
+.faq-fold__item summary::-webkit-details-marker { display: none; }
+.faq-fold__item summary::marker { content: none; }
+.faq-fold__item summary:hover { color: rgba(250, 248, 245, 0.75); }
+.faq-fold__item summary:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.faq-fold__chev { flex: none; color: rgba(250, 248, 245, 0.5); transition: transform 0.25s ease; }
+.faq-fold__item[open] .faq-fold__chev { transform: rotate(45deg); }
+.faq-fold__a { padding: 0 0 1.35rem; font-size: 0.95rem; line-height: 1.68; color: rgba(250, 248, 245, 0.68); max-width: 56rem; }
+
 .faq { display: flex; flex-direction: column; }
 .faq__item { padding: 1.4rem 0; border-top: 1px solid rgba(250, 248, 245, 0.15); display: flex; flex-direction: column; gap: 0.5rem; }
 .faq__item:last-child { border-bottom: 1px solid rgba(250, 248, 245, 0.15); }
