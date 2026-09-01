@@ -89,7 +89,7 @@ h1, h2, h3 { text-wrap: balance; } /* no widowed words in headings */
   display: flex; align-items: center; gap: 2rem;
 }
 .header__brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
-.header__mark { border-radius: 3px; }
+.header__mark { width: 34px; height: 34px; border-radius: 3px; }
 .header__wordmark {
   color: var(--cream); font-size: 0.82rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap;
@@ -455,7 +455,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 }
 .news-card { display: flex; flex-direction: column; gap: 0.7rem; text-decoration: none; }
 .news-card__img {
-  width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px;
+  width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px;
   transition: opacity 0.25s ease;
 }
 .news-card:hover .news-card__img { opacity: 0.85; }
@@ -663,6 +663,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 
 /* Prose (about, articles, legal) */
 .prose { max-width: 46rem; display: flex; flex-direction: column; gap: 1.1rem; }
+.prose img { height: auto; }
 .prose p { font-size: 1.02rem; line-height: 1.75; color: rgba(250, 248, 245, 0.8); }
 .prose h2 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.01em; color: var(--cream); margin-top: 1rem; }
 .prose a { color: var(--cream); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(250, 248, 245, 0.4); }
@@ -705,7 +706,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.4fr; gap: 2.5rem;
 }
 .footer__lockup { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.8rem; }
-.footer__lockup img { border-radius: 3px; }
+.footer__lockup img { width: 30px; height: 30px; border-radius: 3px; }
 .footer__wordmark { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); }
 .footer__tagline { font-size: 0.88rem; line-height: 1.6; color: rgba(250, 248, 245, 0.6); max-width: 240px; }
 .footer__col { display: flex; flex-direction: column; gap: 0.55rem; }
