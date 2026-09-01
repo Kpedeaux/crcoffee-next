@@ -383,6 +383,13 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 @media (prefers-reduced-motion: reduce) { .photorow__fig--swap .photorow__altpic { transition: none; } }
 .photorow--menu { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 700px) { .photorow--menu { grid-template-columns: repeat(2, 1fr); } }
+/* Cells without a second photo get a slow zoom on hover instead */
+.photorow--menu .photorow__fig:not(.photorow__fig--swap) img { transition: transform 0.6s ease; }
+.photorow--menu .photorow__fig:not(.photorow__fig--swap):hover img,
+.photorow--menu .photorow__fig:not(.photorow__fig--swap):focus-within img { transform: scale(1.05); }
+@media (prefers-reduced-motion: reduce) {
+  .photorow--menu .photorow__fig:not(.photorow__fig--swap) img { transition: none; transform: none !important; }
+}
 /* Mood chips: filter the drink collage by style */
 .mood-chips { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
 .mood-chip {

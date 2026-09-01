@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" media="(orientation: landscape)" fetchpriority="high">
   <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=15">
+  <link rel="stylesheet" href="/css/main.css?v=16">
 </head>
 <body>
 
@@ -210,11 +210,14 @@
             </a>
             <figcaption class="photorow__cap"><span>Cold Brew Cubano</span></figcaption>
           </figure>
-          <figure class="photorow__fig">
+          <figure class="photorow__fig photorow__fig--swap">
             <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/cold-brew/8" rel="noopener" aria-label="Order a Cold Brew Iced Coffee">
               <picture>
                 <source srcset="/img/drinks-coldbrew-ice.webp" type="image/webp">
                 <img src="/img/drinks-coldbrew-ice.jpg" alt="Cold brew over crushed ice, up close" width="1033" height="1550" loading="lazy" decoding="async">
+              </picture>
+              <picture class="photorow__altpic" aria-hidden="true">
+                <img src="/img/ig-iced-coffee-porch.jpg" alt="" width="600" height="600" loading="lazy" decoding="async">
               </picture>
             </a>
             <figcaption class="photorow__cap"><span>Cold Brew Iced Coffee</span></figcaption>
@@ -232,20 +235,28 @@
             </a>
             <figcaption class="photorow__cap"><span>Latte</span></figcaption>
           </figure>
-          <figure class="photorow__fig">
+          <figure class="photorow__fig photorow__fig--swap">
             <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/cafe-au-lait/2" rel="noopener" aria-label="Order a Cafe au Lait">
               <picture>
                 <source srcset="/img/drinks-au-lait.webp" type="image/webp">
                 <img src="/img/drinks-au-lait.jpg" alt="Steamed milk meeting chicory coffee in a cafe au lait" width="800" height="1020" loading="lazy" decoding="async">
               </picture>
+              <picture class="photorow__altpic" aria-hidden="true">
+                <source srcset="/img/hero-mugs-steam.webp" type="image/webp">
+                <img src="/img/hero-mugs-steam.jpg" alt="" width="1920" height="1376" loading="lazy" decoding="async">
+              </picture>
             </a>
             <figcaption class="photorow__cap"><span>Caf&eacute; au Lait</span></figcaption>
           </figure>
-          <figure class="photorow__fig">
+          <figure class="photorow__fig photorow__fig--swap">
             <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/americano/23" rel="noopener" aria-label="Order an Americano">
               <picture>
                 <source srcset="/img/drinks-americano.webp" type="image/webp">
                 <img src="/img/drinks-americano.jpg" alt="A fresh shot of espresso poured into an Americano" width="874" height="800" loading="lazy" decoding="async" style="object-position: 45% 50%;">
+              </picture>
+              <picture class="photorow__altpic" aria-hidden="true">
+                <source srcset="/img/hero-crema.webp" type="image/webp">
+                <img src="/img/hero-crema.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async">
               </picture>
             </a>
             <figcaption class="photorow__cap"><span>Americano</span></figcaption>
