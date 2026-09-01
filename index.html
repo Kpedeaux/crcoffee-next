@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" media="(orientation: landscape)" fetchpriority="high">
   <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=13">
+  <link rel="stylesheet" href="/css/main.css?v=14">
 </head>
 <body>
 
@@ -186,9 +186,14 @@
     <section class="section-pad reveal" id="pouring" aria-label="Signature drinks">
       <div class="section-inner">
         <p class="kicker" style="margin-bottom: 0.6rem;">The menu</p>
-        <h2 class="section-title" style="margin-bottom: 2rem;">What we&#39;re pouring.</h2>
-        <div class="photorow photorow--tall">
-          <figure class="photorow__fig photorow__fig--swap">
+        <h2 class="section-title" style="margin-bottom: 1.4rem;">What we&#39;re pouring.</h2>
+        <div class="mood-chips" role="group" aria-label="Filter drinks by style">
+          <button type="button" class="mood-chip" data-mood="iced" aria-pressed="true">Iced</button>
+          <button type="button" class="mood-chip" data-mood="hot" aria-pressed="false">Hot</button>
+          <button type="button" class="mood-chip" data-mood="frozen" aria-pressed="false">Frozen</button>
+        </div>
+        <div class="photorow photorow--tall photorow--moods" id="pouring-grid" data-mood="iced">
+          <figure class="photorow__fig photorow__fig--swap" data-mood="iced">
             <a class="photorow__link" href="/drinks#sweet-vanilla-cream-cold-brew" rel="noopener" aria-label="Sweet Vanilla Cream Cold Brew, on the menu">
               <picture>
                 <source srcset="/img/drinks-cream-float.webp" type="image/webp">
@@ -201,7 +206,25 @@
             </a>
             <figcaption class="photorow__cap"><span>Sweet Vanilla Cream Cold Brew</span></figcaption>
           </figure>
-          <figure class="photorow__fig photorow__fig--swap">
+          <figure class="photorow__fig" data-mood="iced">
+            <a class="photorow__link" href="/drinks#cold-brew-cubano" rel="noopener" aria-label="Cold Brew Cubano, on the menu">
+              <picture>
+                <source srcset="/img/drinks-cubano.webp" type="image/webp">
+                <img src="/img/drinks-cubano.jpg" alt="A Cold Brew Cubano, Cuban espresso crema over cold brew and ice" width="1200" height="1138" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <figcaption class="photorow__cap"><span>Cold Brew Cubano</span></figcaption>
+          </figure>
+          <figure class="photorow__fig" data-mood="iced">
+            <a class="photorow__link" href="/drinks#cold-drinks" rel="noopener" aria-label="Cold Brew Iced Coffee, on the menu">
+              <picture>
+                <source srcset="/img/drinks-coldbrew-ice.webp" type="image/webp">
+                <img src="/img/drinks-coldbrew-ice.jpg" alt="Cold brew over crushed ice, up close" width="1033" height="1550" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <figcaption class="photorow__cap"><span>Cold Brew Iced Coffee</span></figcaption>
+          </figure>
+          <figure class="photorow__fig photorow__fig--swap" data-mood="hot">
             <a class="photorow__link" href="/drinks#espresso-drinks" rel="noopener" aria-label="Latte, on the menu">
               <picture>
                 <source srcset="/img/drinks-milk-pour.webp" type="image/webp">
@@ -214,7 +237,25 @@
             </a>
             <figcaption class="photorow__cap"><span>Latte</span></figcaption>
           </figure>
-          <figure class="photorow__fig photorow__fig--swap">
+          <figure class="photorow__fig" data-mood="hot">
+            <a class="photorow__link" href="/drinks#cafe-au-lait" rel="noopener" aria-label="Cafe au Lait, on the menu">
+              <picture>
+                <source srcset="/img/drinks-au-lait.webp" type="image/webp">
+                <img src="/img/drinks-au-lait.jpg" alt="Steamed milk meeting chicory coffee in a cafe au lait" width="800" height="1020" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <figcaption class="photorow__cap"><span>Caf&eacute; au Lait</span></figcaption>
+          </figure>
+          <figure class="photorow__fig" data-mood="hot">
+            <a class="photorow__link" href="/drinks#espresso-drinks" rel="noopener" aria-label="Americano, on the menu">
+              <picture>
+                <source srcset="/img/drinks-americano.webp" type="image/webp">
+                <img src="/img/drinks-americano.jpg" alt="A fresh shot of espresso poured into an Americano" width="874" height="800" loading="lazy" decoding="async" style="object-position: 45% 50%;">
+              </picture>
+            </a>
+            <figcaption class="photorow__cap"><span>Americano</span></figcaption>
+          </figure>
+          <figure class="photorow__fig photorow__fig--swap" data-mood="frozen">
             <a class="photorow__link" href="/drinks#chocolate-covered-espresso-bean-frozen" rel="noopener" aria-label="Chocolate-Covered Espresso Bean Frozen, on the menu">
               <picture>
                 <source srcset="/img/drinks-frozen-pair.webp" type="image/webp">
@@ -436,6 +477,6 @@
   }
   </script>
 
-  <script src="/js/hero.js?v=10" defer></script>
+  <script src="/js/hero.js?v=11" defer></script>
 </body>
 </html>
