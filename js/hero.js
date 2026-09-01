@@ -206,18 +206,3 @@
   if (document.readyState === 'complete') { injectVideo(); }
   else { window.addEventListener('load', injectVideo, { once: true }); }
 })();
-
-/* Mood chips: filter the "What we're pouring" collage by drink style */
-(function () {
-  var chips = document.querySelector('.mood-chips');
-  var grid = document.getElementById('pouring-grid');
-  if (!chips || !grid) return;
-  chips.addEventListener('click', function (e) {
-    var btn = e.target.closest('button[data-mood]');
-    if (!btn) return;
-    grid.setAttribute('data-mood', btn.getAttribute('data-mood'));
-    chips.querySelectorAll('button[data-mood]').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b === btn));
-    });
-  });
-})();

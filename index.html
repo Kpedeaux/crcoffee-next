@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" media="(orientation: landscape)" fetchpriority="high">
   <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=14">
+  <link rel="stylesheet" href="/css/main.css?v=15">
 </head>
 <body>
 
@@ -186,15 +186,10 @@
     <section class="section-pad reveal" id="pouring" aria-label="Signature drinks">
       <div class="section-inner">
         <p class="kicker" style="margin-bottom: 0.6rem;">The menu</p>
-        <h2 class="section-title" style="margin-bottom: 1.4rem;">What we&#39;re pouring.</h2>
-        <div class="mood-chips" role="group" aria-label="Filter drinks by style">
-          <button type="button" class="mood-chip" data-mood="iced" aria-pressed="true">Iced</button>
-          <button type="button" class="mood-chip" data-mood="hot" aria-pressed="false">Hot</button>
-          <button type="button" class="mood-chip" data-mood="frozen" aria-pressed="false">Frozen</button>
-        </div>
-        <div class="photorow photorow--tall photorow--moods" id="pouring-grid" data-mood="iced">
-          <figure class="photorow__fig photorow__fig--swap" data-mood="iced">
-            <a class="photorow__link" href="/drinks#sweet-vanilla-cream-cold-brew" rel="noopener" aria-label="Sweet Vanilla Cream Cold Brew, on the menu">
+        <h2 class="section-title" style="margin-bottom: 2rem;">What we&#39;re pouring.</h2>
+        <div class="photorow photorow--tall photorow--menu">
+          <figure class="photorow__fig photorow__fig--swap">
+            <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/sweet-vanilla-cream-cold-brew/7" rel="noopener" aria-label="Order a Sweet Vanilla Cream Cold Brew">
               <picture>
                 <source srcset="/img/drinks-cream-float.webp" type="image/webp">
                 <img src="/img/drinks-cream-float.jpg" alt="Sweet Vanilla Cream Cold Brew, vanilla cream marbling into cold brew in a CR glass" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 40%;">
@@ -206,8 +201,8 @@
             </a>
             <figcaption class="photorow__cap"><span>Sweet Vanilla Cream Cold Brew</span></figcaption>
           </figure>
-          <figure class="photorow__fig" data-mood="iced">
-            <a class="photorow__link" href="/drinks#cold-brew-cubano" rel="noopener" aria-label="Cold Brew Cubano, on the menu">
+          <figure class="photorow__fig">
+            <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/ColdBrewCubano/210" rel="noopener" aria-label="Order a Cold Brew Cubano">
               <picture>
                 <source srcset="/img/drinks-cubano.webp" type="image/webp">
                 <img src="/img/drinks-cubano.jpg" alt="A Cold Brew Cubano, Cuban espresso crema over cold brew and ice" width="1200" height="1138" loading="lazy" decoding="async">
@@ -215,8 +210,8 @@
             </a>
             <figcaption class="photorow__cap"><span>Cold Brew Cubano</span></figcaption>
           </figure>
-          <figure class="photorow__fig" data-mood="iced">
-            <a class="photorow__link" href="/drinks#cold-drinks" rel="noopener" aria-label="Cold Brew Iced Coffee, on the menu">
+          <figure class="photorow__fig">
+            <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/cold-brew/8" rel="noopener" aria-label="Order a Cold Brew Iced Coffee">
               <picture>
                 <source srcset="/img/drinks-coldbrew-ice.webp" type="image/webp">
                 <img src="/img/drinks-coldbrew-ice.jpg" alt="Cold brew over crushed ice, up close" width="1033" height="1550" loading="lazy" decoding="async">
@@ -224,21 +219,21 @@
             </a>
             <figcaption class="photorow__cap"><span>Cold Brew Iced Coffee</span></figcaption>
           </figure>
-          <figure class="photorow__fig photorow__fig--swap" data-mood="hot">
-            <a class="photorow__link" href="/drinks#espresso-drinks" rel="noopener" aria-label="Latte, on the menu">
+          <figure class="photorow__fig photorow__fig--swap">
+            <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/latte/3" rel="noopener" aria-label="Order a Latte">
               <picture>
-                <source srcset="/img/drinks-milk-pour.webp" type="image/webp">
-                <img src="/img/drinks-milk-pour.jpg" alt="Steamed milk pouring into a latte" width="1920" height="1280" loading="lazy" decoding="async">
+                <source srcset="/img/drinks-latte-fern.webp" type="image/webp">
+                <img src="/img/drinks-latte-fern.jpg" alt="A fern poured in the milk foam of a latte" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 45%;">
               </picture>
               <picture class="photorow__altpic" aria-hidden="true">
-                <source srcset="/img/drinks-latte-fern.webp" type="image/webp">
-                <img src="/img/drinks-latte-fern.jpg" alt="" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 45%;">
+                <source srcset="/img/drinks-milk-pour.webp" type="image/webp">
+                <img src="/img/drinks-milk-pour.jpg" alt="" width="1920" height="1280" loading="lazy" decoding="async">
               </picture>
             </a>
             <figcaption class="photorow__cap"><span>Latte</span></figcaption>
           </figure>
-          <figure class="photorow__fig" data-mood="hot">
-            <a class="photorow__link" href="/drinks#cafe-au-lait" rel="noopener" aria-label="Cafe au Lait, on the menu">
+          <figure class="photorow__fig">
+            <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/cafe-au-lait/2" rel="noopener" aria-label="Order a Cafe au Lait">
               <picture>
                 <source srcset="/img/drinks-au-lait.webp" type="image/webp">
                 <img src="/img/drinks-au-lait.jpg" alt="Steamed milk meeting chicory coffee in a cafe au lait" width="800" height="1020" loading="lazy" decoding="async">
@@ -246,8 +241,8 @@
             </a>
             <figcaption class="photorow__cap"><span>Caf&eacute; au Lait</span></figcaption>
           </figure>
-          <figure class="photorow__fig" data-mood="hot">
-            <a class="photorow__link" href="/drinks#espresso-drinks" rel="noopener" aria-label="Americano, on the menu">
+          <figure class="photorow__fig">
+            <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/americano/23" rel="noopener" aria-label="Order an Americano">
               <picture>
                 <source srcset="/img/drinks-americano.webp" type="image/webp">
                 <img src="/img/drinks-americano.jpg" alt="A fresh shot of espresso poured into an Americano" width="874" height="800" loading="lazy" decoding="async" style="object-position: 45% 50%;">
@@ -255,8 +250,8 @@
             </a>
             <figcaption class="photorow__cap"><span>Americano</span></figcaption>
           </figure>
-          <figure class="photorow__fig photorow__fig--swap" data-mood="frozen">
-            <a class="photorow__link" href="/drinks#chocolate-covered-espresso-bean-frozen" rel="noopener" aria-label="Chocolate-Covered Espresso Bean Frozen, on the menu">
+          <figure class="photorow__fig photorow__fig--swap">
+            <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/Chocolate-Covered-frozen/21" rel="noopener" aria-label="Order a Chocolate-Covered Espresso Bean Frozen">
               <picture>
                 <source srcset="/img/drinks-frozen-pair.webp" type="image/webp">
                 <img src="/img/drinks-frozen-pair.jpg" alt="Two Chocolate-Covered Espresso Bean Frozens on the counter" width="1200" height="1600" loading="lazy" decoding="async" style="object-position: 50% 60%;">
@@ -266,6 +261,15 @@
               </picture>
             </a>
             <figcaption class="photorow__cap"><span>Chocolate-Covered Espresso Bean Frozen</span></figcaption>
+          </figure>
+          <figure class="photorow__fig">
+            <a class="photorow__link" href="https://cr-coffee-shop.square.site/product/frozen-coffee/11" rel="noopener" aria-label="Order a Frozen Coffee">
+              <picture>
+                <source srcset="/img/drinks-frozen-classic.webp" type="image/webp">
+                <img src="/img/drinks-frozen-classic.jpg" alt="A thick Frozen Coffee pouring from the blender into the cup" width="480" height="600" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <figcaption class="photorow__cap"><span>Frozen Coffee</span></figcaption>
           </figure>
         </div>
         <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1.8rem;">
@@ -301,7 +305,7 @@
 
     <section class="section-pad reveal" style="padding-top: clamp(2.4rem, 6vh, 3.6rem); padding-bottom: clamp(2.4rem, 6vh, 3.6rem);" aria-label="How your coffee is roasted">
       <div class="section-inner" style="text-align: center; max-width: 640px;">
-        <p style="font-size: 1.05rem; line-height: 1.65; color: rgba(250,248,245,0.78); margin-bottom: 1.4rem;">Every cup we pour is roasted slow on our century-old Royal No. 6 drums, by hand and by ear.</p>
+        <p style="font-size: 1.05rem; line-height: 1.65; color: rgba(250,248,245,0.78); margin-bottom: 1.4rem;">Every cup we pour is roasted slow on century-old Royal No. 6 drums, by hand and by ear.</p>
         <a class="btn btn--ghost" href="/coffee" rel="noopener">See how your coffee gets to your cup</a>
       </div>
     </section>
@@ -477,6 +481,6 @@
   }
   </script>
 
-  <script src="/js/hero.js?v=11" defer></script>
+  <script src="/js/hero.js?v=12" defer></script>
 </body>
 </html>
