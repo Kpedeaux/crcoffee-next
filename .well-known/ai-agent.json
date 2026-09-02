@@ -39,6 +39,9 @@
     "booking": "https://coffeeshop.creativecorerail.com/book/cr",
     "url": "https://crcoffeenola.com/crescent-room"
   },
+  "promotions": [
+    { "name": "The Bayou Beast", "what": "Seasonal pandan iced latte topped with warm fall spices; our most popular drink", "where": "Magazine Street, Old Metairie, St. Roch Market", "starts": "2026-07-15", "ends": "2026-10-31", "order": "https://square.link/u/p3fnkbVz", "url": "https://crcoffeenola.com/bayou-beast" }
+  ],
   "online_ordering": {
     "drinks_to_go": "https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2",
     "beans_and_merch": "https://cr-coffee-shop.square.site/shop/at-home-coffee-and-tea/4",

@@ -29,7 +29,7 @@
   <link rel="preload" as="image" href="/img/hero-poster.avif" type="image/avif" media="(orientation: landscape)" fetchpriority="high">
   <link rel="preload" href="/font/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/font/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=18">
+  <link rel="stylesheet" href="/css/main.css?v=19">
 </head>
 <body>
 
@@ -158,6 +158,48 @@
           </div>
         </li>
       </ul>
+    </section>
+
+    <section class="beast reveal" id="bayou-beast" data-beast aria-label="The Bayou Beast, here through Halloween">
+      <div class="beast__fog"></div>
+      <div class="beast__fog beast__fog--2"></div>
+      <div class="beast__vignette"></div>
+      <div class="beast__inner">
+        <div class="beast__monitor" data-video="/img/bayou-beast/bayou-beast-launch.mp4">
+          <picture>
+            <source srcset="/img/bayou-beast/bayou-beast-launch-poster.webp" type="image/webp">
+            <img src="/img/bayou-beast/bayou-beast-launch-poster.jpg" alt="The Bayou Beast, a swamp-green pandan iced latte with the hand drawn beast on the glass" width="720" height="960" loading="lazy" decoding="async">
+          </picture>
+          <div class="beast__scan"></div>
+          <div class="beast__glass"></div>
+          <div class="beast__roll"></div>
+          <div class="beast__hud beast__hud--top" aria-hidden="true"><span class="beast__rec"><span class="beast__rec-dot"></span>Rec</span><span class="beast__timecode" data-timecode>00:00:00</span></div>
+          <div class="beast__hud beast__hud--bottom" aria-hidden="true"><span>Cam 02 &middot; Magazine St</span><span>Oct 31 &middot; 11:59 PM</span></div>
+          <button class="beast__pause" type="button" aria-pressed="false" aria-label="Pause video" hidden>
+            <svg class="beast__pause-icon beast__pause-icon--pause" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><rect x="3" y="2" width="3.4" height="12" rx="1" fill="currentColor"/><rect x="9.6" y="2" width="3.4" height="12" rx="1" fill="currentColor"/></svg>
+            <svg class="beast__pause-icon beast__pause-icon--play" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4.5 2.5v11l9-5.5z" fill="currentColor"/></svg>
+          </button>
+        </div>
+        <div class="beast__text">
+          <p class="kicker beast__kicker">The Bayou Beast &middot; Sighting report</p>
+          <h2 class="section-title beast__title">Last seen at all three shops. Here through Halloween.</h2>
+          <div class="beast__timer" role="timer" aria-live="off" aria-label="Time left until the Bayou Beast leaves">
+            <div class="beast__unit"><span class="beast__num" data-cd="days">--</span><span class="beast__label">days left</span></div>
+            <div class="beast__unit"><span class="beast__num" data-cd="hours">--</span><span class="beast__label">hours</span></div>
+            <div class="beast__unit"><span class="beast__num" data-cd="mins">--</span><span class="beast__label">minutes</span></div>
+          </div>
+          <div class="beast__log">
+            <div class="beast__log-row"><span class="beast__log-key">The drink</span><span class="beast__log-val">Pandan iced latte, topped with warm fall spices</span></div>
+            <div class="beast__log-row"><span class="beast__log-key">Sightings</span><span class="beast__log-val"><a href="/magazine-street" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Magazine Street</a> &middot; <a href="/old-metairie" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Old Metairie</a> &middot; <a href="/st-roch-market" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">St. Roch Market</a></span></div>
+            <div class="beast__log-row"><span class="beast__log-key">Status</span><span class="beast__log-val beast__log-val--live">Pouring now.</span></div>
+          </div>
+          <div class="beast__actions">
+            <a class="btn btn--primary" href="https://square.link/u/p3fnkbVz?utm_source=website&amp;utm_medium=countdown&amp;utm_campaign=bayou_beast_2026" rel="noopener">Order the Beast</a>
+            <a class="btn btn--ghost" href="/bayou-beast">Meet the Beast</a>
+          </div>
+          <p class="beast__proof">Our most popular drink. Poured at all three shops.</p>
+        </div>
+      </div>
     </section>
 
     <section class="beans reveal" id="beans" aria-label="Fresh-roasted beans">
@@ -673,6 +715,6 @@
 }
   </script>
 
-  <script src="/js/hero.js?v=13" defer></script>
+  <script src="/js/hero.js?v=14" defer></script>
 </body>
 </html>

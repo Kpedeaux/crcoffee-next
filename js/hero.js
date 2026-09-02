@@ -266,3 +266,72 @@
     });
   });
 })();
+
+/* Bayou Beast: seasonal countdown to Halloween (Central time) and the found-footage
+   monitor. TO TAKE IT DOWN on Nov 1: set BAYOU_BEAST_SEASON to false and bump the
+   ?v= on hero.js sitewide. Every [data-beast] block also hides itself once the
+   countdown reaches zero, so nothing ever shows a negative number. */
+(function () {
+  var BAYOU_BEAST_SEASON = true;
+  var blocks = document.querySelectorAll('[data-beast]');
+  if (!blocks.length) return;
+  if (!BAYOU_BEAST_SEASON) { blocks.forEach(function (b) { b.hidden = true; }); return; }
+  var target = new Date('2026-10-31T23:59:59-05:00').getTime();
+  var timer = null;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function tick() {
+    var diff = target - Date.now();
+    blocks.forEach(function (b) {
+      if (diff <= 0) { b.hidden = true; return; }
+      var totalMin = Math.floor(diff / 60000);
+      var d = b.querySelector('[data-cd="days"]');
+      var h = b.querySelector('[data-cd="hours"]');
+      var m = b.querySelector('[data-cd="mins"]');
+      if (d) d.textContent = String(Math.floor(totalMin / 1440));
+      if (h) h.textContent = pad(Math.floor((totalMin % 1440) / 60));
+      if (m) m.textContent = pad(totalMin % 60);
+    });
+    if (diff <= 0 && timer) clearInterval(timer);
+  }
+  tick();
+  timer = setInterval(tick, 15000);
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var saveData = navigator.connection && navigator.connection.saveData;
+  document.querySelectorAll('.beast__monitor[data-video]').forEach(function (mon) {
+    var btn = mon.querySelector('.beast__pause');
+    var tc = mon.querySelector('[data-timecode]');
+    var poster = mon.querySelector('picture') || mon.querySelector('img');
+    if (reduced || saveData || !poster) return; /* the poster stands alone */
+    var v = document.createElement('video');
+    v.muted = true; v.loop = true; v.playsInline = true;
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('aria-hidden', 'true');
+    v.preload = 'metadata';
+    v.src = mon.getAttribute('data-video');
+    var userPaused = false;
+    v.addEventListener('playing', function () { v.classList.add('is-playing'); if (btn) btn.hidden = false; });
+    v.addEventListener('timeupdate', function () {
+      if (!tc) return;
+      var s = Math.floor(v.currentTime);
+      tc.textContent = '00:' + pad(Math.floor(s / 60)) + ':' + pad(s % 60);
+    });
+    poster.insertAdjacentElement('afterend', v);
+    if (btn) {
+      btn.addEventListener('click', function () {
+        if (v.paused) { userPaused = false; v.play().catch(function () {}); btn.setAttribute('aria-pressed', 'false'); btn.setAttribute('aria-label', 'Pause video'); }
+        else { userPaused = true; v.pause(); btn.setAttribute('aria-pressed', 'true'); btn.setAttribute('aria-label', 'Play video'); }
+      });
+    }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { if (!userPaused) v.play().catch(function () {}); }
+          else { v.pause(); }
+        });
+      }, { rootMargin: '200px 0px' });
+      io.observe(mon);
+    } else {
+      v.play().catch(function () {});
+    }
+  });
+})();

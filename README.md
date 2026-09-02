@@ -6,7 +6,7 @@ From-scratch rebuild of crcoffeenola.com. **The live site at `CoreRail\crcoffee-
 
 - **BETA. Not launched. Do not point crcoffeenola.com here.**
 - Launch window: after Bayou Beast season ends (Nov 1, 2026), on Kevin's word.
-- Branding: post-season CR Coffee. No Bayou Beast takeover machinery in this codebase.
+- Bayou Beast season (added 2026-09-02, since launch now lands mid-season): homepage countdown section, /bayou-beast page, a Signature row on /drinks, an llms.txt line and an ai-agent.json promotion. One flag runs it: `BAYOU_BEAST_SEASON` in js/hero.js. Every `[data-beast]` block hides itself after Halloween 11:59 PM Central on its own. On Nov 1: flip the flag to false, bump the hero.js ?v= sitewide, remove the /drinks row and its MenuItem, drop the llms.txt line and the ai-agent.json promotion, and either past-tense /bayou-beast or 301 it to /drinks. Never the old drink name, never "unleash", never the trademark story.
 - Crescent Room: intentionally dropped from this version (can be re-linked later if plans change).
 
 ## Beta guardrails (already baked in, remove only at launch)
@@ -50,7 +50,6 @@ The running list of off-site and launch-day work (listings, reviews, PR, Cloudfl
 
 - The /coffee film embed needs `frame-src https://www.youtube-nocookie.com` when the production CSP is added to `_headers` (the beta has no CSP). The four location pages also embed Google Maps, so the same CSP needs `frame-src https://www.google.com` alongside it.
 - Re-point Cloudflare zone/GSC as planned; `_redirects` here is already launch-ready (why-cr-coffee → about, press → news, Crescent Room paths → /crescent-room, drink pages → menu anchors).
-- OPEN QUESTION for Kevin: `/bayou-beast` currently 301s to /drinks; if the Beast returns in 2027, resurrect a landing page at that path instead.
 
 - Swap the beta no-cache block in `_headers` for the production caching policy (see the comment in that file). The `?v=` version-tag discipline on css/js/video references is what makes the immutable policy safe.
 
