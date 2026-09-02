@@ -842,13 +842,14 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 /* Two-up form fields stack on phones */
 @media (max-width: 600px) { .form-2col { grid-template-columns: minmax(0, 1fr) !important; } }
 
-/* Menu rows with a photo per drink (drinks page, Direction A) */
+/* Index rows with a photo per item (drinks page, coffee page) */
+.xindex--photos .xindex__row { grid-template-columns: 128px 280px 1fr 200px; align-items: center; }
 .xindex--photos .xindex__row--plain { grid-template-columns: 128px 280px 1fr; align-items: center; }
 .xindex__pic { width: 128px; height: 128px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(250, 248, 245, 0.16); background: var(--espresso); }
 .xindex__pic picture { display: block; width: 100%; height: 100%; }
 .xindex__pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 860px) {
   /* Phones: the photo goes full width and square, the words sit under it, like a feed */
-  .xindex--photos .xindex__row--plain { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; align-items: start; }
+  .xindex--photos .xindex__row, .xindex--photos .xindex__row--plain { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; align-items: start; }
   .xindex--photos .xindex__pic { width: 100%; height: auto; aspect-ratio: 1 / 1; }
 }
