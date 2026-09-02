@@ -5,10 +5,19 @@
   <link href="https://crcoffeenola.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://crcoffeenola.com/news" rel="alternate" type="text/html"/>
   <id>https://crcoffeenola.com/</id>
-  <updated>2026-08-27T12:00:00-05:00</updated>
+  <updated>2026-09-02T12:00:00-05:00</updated>
   <author><name>Kevin Pedeaux</name><uri>https://crcoffeenola.com/about#kevin</uri></author>
   <icon>https://crcoffeenola.com/img/favicon-192x192.png</icon>
   <logo>https://crcoffeenola.com/img/favicon-512x512.png</logo>
+  <entry>
+    <title>Marielle Songy Wrote the Book on New Orleans Coffee. Then She Came By for a Cup.</title>
+    <link href="https://crcoffeenola.com/news/marielle-songy-coffee-culture-new-orleans" rel="alternate" type="text/html"/>
+    <id>https://crcoffeenola.com/news/marielle-songy-coffee-culture-new-orleans</id>
+    <published>2026-09-02T12:00:00-05:00</published>
+    <updated>2026-09-02T12:00:00-05:00</updated>
+    <summary>Kevin sits down with Marielle Songy, author of Coffee Culture New Orleans (LSU Press), the book that calls him one of the city's most knowledgeable coffee experts.</summary>
+    <link rel="enclosure" type="image/jpeg" href="https://crcoffeenola.com/img/news/marielle-songy-coffee-culture-new-orleans.jpg"/>
+  </entry>
   <entry>
     <title>The Most Decadent Drink We Make Is Also the Coldest</title>
     <link href="https://crcoffeenola.com/news/chocolate-covered-espresso-bean-frozen" rel="alternate" type="text/html"/>
@@ -224,14 +233,5 @@
     <updated>2025-03-23T12:00:00-05:00</updated>
     <summary>Inside a CR Coffee cupping session: how Kevin evaluates green coffee samples, picks out flavor profiles, and builds the blends you drink at the shop.</summary>
     <link rel="enclosure" type="image/jpeg" href="https://crcoffeenola.com/img/news/cupping-session-hero.jpg"/>
-  </entry>
-  <entry>
-    <title>Featured in The Scout Guide</title>
-    <link href="https://crcoffeenola.com/news/scout-guide-feature" rel="alternate" type="text/html"/>
-    <id>https://crcoffeenola.com/news/scout-guide-feature</id>
-    <published>2024-01-01T12:00:00-05:00</published>
-    <updated>2024-01-01T12:00:00-05:00</updated>
-    <summary>CR Coffee was featured in The Scout Guide's curated guide to the best of New Orleans. Read about the recognition.</summary>
-    <link rel="enclosure" type="image/jpeg" href="https://crcoffeenola.com/img/news/scout-guide-card.jpg"/>
   </entry>
 </feed>
