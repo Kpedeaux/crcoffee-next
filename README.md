@@ -39,6 +39,8 @@ While this site is in beta it must never be indexed:
 
 ### Search and AI visibility (added 2026-09-02; full audit in `docs/seo-geo-audit-2026-09-02.md`)
 
+The running list of off-site and launch-day work (listings, reviews, PR, Cloudflare, Search Console, GA4) is `docs/still-to-do.md`. Check items off there as they close.
+
 - Replace `robots.txt` with `robots.production.txt` in the launch commit (current allowlist of search and answer-engine crawlers, sitemap and AI-Agent lines). `sitemap.xml` and `feed.xml` are generated files: regenerate after adding pages with `python scripts/sitemap.py` (and `python scripts/og-and-variants.py` for the og:image crop and hero variants of a new page; no priority/changefreq, lastmod only on articles).
 - Verify the domain in Google Search Console and Bing Webmaster Tools the day of launch; submit the sitemap in both. Bing's IndexNow is free through Cloudflare (Crawler Hints, below). Never enable the GSC "exclude from generative AI" setting; it removes the site from AI Overviews and AI Mode.
 - Cloudflare zone: turn ON Crawler Hints, Early Hints, and Speed Brain; leave Rocket Loader OFF (breaks the hero/nav script) and Polish/Mirage OFF (images are already sized and compressed here); set the AI bot controls to allow the Search and Agent categories (Training is Kevin's call, allowed by policy on his own sites).
