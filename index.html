@@ -34,8 +34,8 @@
        and www.crcoffeenola.com, so the beta and local previews never send data. -->
   <script>
     (function () {
-      var h = location.hostname;
-      if (h !== 'crcoffeenola.com' && h !== 'www.crcoffeenola.com') return;
+      /* apex or www only: the beta hostname and local previews stay silent */
+      if (location.hostname.replace(/^www\./, '') !== 'crcoffeenola.com') return;
       var s = document.createElement('script'); s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HKVK4WGRHD';
       document.head.appendChild(s);
