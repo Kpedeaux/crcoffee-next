@@ -26,6 +26,23 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="stylesheet" href="/css/main.css?v=25">
+  <!-- Google Analytics 4 + Google Ads (same tag as the live site). Loads only on crcoffeenola.com
+       and www.crcoffeenola.com, so the beta and local previews never send data. -->
+  <script>
+    (function () {
+      var h = location.hostname;
+      if (h !== 'crcoffeenola.com' && h !== 'www.crcoffeenola.com') return;
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HKVK4WGRHD';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-HKVK4WGRHD');
+      gtag('config', 'AW-934550726');
+    })();
+  </script>
 </head>
 <body>
 
@@ -377,6 +394,6 @@
 }
   </script>
 
-  <script src="/js/hero.js?v=14" defer></script>
+  <script src="/js/hero.js?v=15" defer></script>
 </body>
 </html>

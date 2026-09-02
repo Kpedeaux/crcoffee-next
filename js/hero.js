@@ -257,6 +257,7 @@
         .then(function (ok) {
           if (!ok) throw new Error('send failed');
           if (status) status.textContent = 'You are on the list. Thanks.';
+          if (typeof window.gtag === 'function') window.gtag('event', 'newsletter_signup', { page_path: location.pathname });
           email.value = '';
         })
         .catch(function () {
@@ -334,4 +335,25 @@
       v.play().catch(function () {});
     }
   });
+})();
+
+
+/* GA4 click events: order, gift card, Beast, call, directions, room booking, email.
+   gtag only exists on the production hostnames, so this is inert on the beta. */
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || typeof window.gtag !== 'function') return;
+    var href = a.getAttribute('href') || '';
+    var name = null;
+    if (/squareup\.com\/gift/.test(href)) name = 'gift_card_click';
+    else if (/square\.link\/u\/p3fnkbVz/.test(href)) name = 'bayou_beast_order_click';
+    else if (/square\.site|square\.link/.test(href)) name = 'order_click';
+    else if (/^tel:/.test(href)) name = 'call_click';
+    else if (/maps\.app\.goo\.gl|google\.com\/maps/.test(href)) name = 'directions_click';
+    else if (/coffeeshop\.creativecorerail\.com\/book/.test(href)) name = 'book_room_click';
+    else if (/^mailto:/.test(href)) name = 'email_click';
+    if (!name) return;
+    window.gtag('event', name, { link_url: href, link_text: (a.textContent || '').trim().slice(0, 80), page_path: location.pathname });
+  }, true);
 })();
