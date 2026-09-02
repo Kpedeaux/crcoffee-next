@@ -16,7 +16,7 @@
 // level by a Redirect Rule and does not need to be duplicated here.
 
 const CANONICAL_HOST = 'crcoffeenola.com';
-const PAGES_DEV_PRODUCTION_HOST = 'crcoffee-site.pages.dev';
+const PAGES_DEV_PRODUCTION_HOSTS = ['crcoffee-site.pages.dev', 'crcoffee-next.pages.dev'];
 
 export async function onRequest(context) {
   const { request, next } = context;
@@ -27,7 +27,7 @@ export async function onRequest(context) {
     return new Response('Not found', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'X-Robots-Tag': 'noindex' } });
   }
 
-  if (url.hostname === PAGES_DEV_PRODUCTION_HOST) {
+  if (PAGES_DEV_PRODUCTION_HOSTS.includes(url.hostname)) {
     const canonical = new URL(
       url.pathname + url.search,
       `https://${CANONICAL_HOST}`
