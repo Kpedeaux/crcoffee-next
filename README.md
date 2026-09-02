@@ -4,7 +4,7 @@ From-scratch rebuild of crcoffeenola.com. **The live site at `CoreRail\crcoffee-
 
 ## Status
 
-- **BETA. Not launched. Do not point crcoffeenola.com here.**
+- **LAUNCHED 2026-09-02.** This tree is what crcoffeenola.com serves (via the Kpedeaux/CRCoffee-site repo, see the launch section). The beta at test.crcoffeenola.com stays on the noindexed main branch here.
 - Launch window: after Bayou Beast season ends (Nov 1, 2026), on Kevin's word.
 - Bayou Beast season (added 2026-09-02, since launch now lands mid-season): homepage countdown section, /bayou-beast page, a Signature row on /drinks, an llms.txt line and an ai-agent.json promotion. One flag runs it: `BAYOU_BEAST_SEASON` in js/hero.js. Every `[data-beast]` block hides itself after Halloween 11:59 PM Central on its own. On Nov 1: flip the flag to false, bump the hero.js ?v= sitewide, remove the /drinks row and its MenuItem, drop the llms.txt line and the ai-agent.json promotion, and either past-tense /bayou-beast or 301 it to /drinks. Never the old drink name, never "unleash", never the trademark story.
 - Crescent Room: intentionally dropped from this version (can be re-linked later if plans change).

@@ -1,6 +1,35 @@
-# BETA SITE — blocked from all crawling until launch.
-# At launch this file is replaced with the production robots.txt
-# (allow all, named AI crawlers, sitemap line) in the same commit
-# that removes the noindex meta and the X-Robots-Tag header.
+# robots.txt for crcoffeenola.com.
+# Bot list current as of 2026-09 (developers.openai.com/api/docs/bots, docs.perplexity.ai/guides/bots,
+# support.claude.com/8896518, developers.google.com/search/docs/crawling-indexing/google-common-crawlers).
+# Search and answer-engine crawlers must be allowed to be CITED; training crawlers are a policy choice
+# with no citation effect either way (allowed on Kevin's own properties).
+
 User-agent: *
-Disallow: /
+Allow: /
+
+# Search, answer engines, and the user-triggered fetchers that read a page at the moment of citation
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Google-Extended
+User-agent: Applebot
+User-agent: DuckAssistBot
+User-agent: Amzn-SearchBot
+Allow: /
+
+# Training-only crawlers (policy: allowed here)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Meta-ExternalAgent
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://crcoffeenola.com/sitemap.xml
+AI-Agent: https://crcoffeenola.com/.well-known/ai-agent.json

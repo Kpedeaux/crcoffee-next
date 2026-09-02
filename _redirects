@@ -1,4 +1,4 @@
-# CR Coffee next-site redirect map (launch-ready; also active on test).
+# crcoffeenola.com redirect map.
 # RULE: never redirect FROM a path that exists as an .html file here (loop risk).
 # Targets use extensionless pretty URLs so legacy paths resolve in one hop.
 
@@ -30,9 +30,13 @@
 /events/                  /crescent-room 301
 /crescent-room-at-cr      /crescent-room 301
 /crescent-room-at-cr/     /crescent-room 301
-/s/appointments           /magazine-street 301
+/s/appointments           /crescent-room 301
 
 # Drink detail pages folded into the menu (anchors exist on /drinks)
 /cold-brew-cubano         /drinks#cold-brew-cubano 301
 /cafe-au-lait             /drinks#cafe-au-lait 301
 /sweet-vanilla-cream-cold-brew /drinks#sweet-vanilla-cream-cold-brew 301
+
+# The old link-in-bio page
+/links                    /                301
+/links/                   /                301
