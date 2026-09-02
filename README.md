@@ -1,3 +1,14 @@
+# RETIRED (2026-09-02). This is not the CR Coffee site.
+
+The rebuild developed here launched on crcoffeenola.com on 2026-09-02 and now lives in the
+production repo **Kpedeaux/CRCoffee-site** (local folder `C:\Users\pedea\CoreRail\crcoffee-site`).
+That repo is the only live one; everything below is history. Do not deploy, edit, or clone this
+repo for site work. The Cloudflare Pages project `crcoffee-next` and the test.crcoffeenola.com
+domain were retired the same day. The 4K hero footage and photo masters that were kept outside git
+here were moved to `crcoffee-site/_internal/rebuild-masters/`.
+
+---
+
 # CR Coffee Shop — next site (beta)
 
 From-scratch rebuild of crcoffeenola.com. **The live site at `CoreRail\crcoffee-site` is untouched and stays the deploy source for crcoffeenola.com until launch.**
