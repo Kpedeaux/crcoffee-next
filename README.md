@@ -37,6 +37,15 @@ While this site is in beta it must never be indexed:
 
 ## At launch, don't forget
 
+### Search and AI visibility (added 2026-09-02; full audit in `docs/seo-geo-audit-2026-09-02.md`)
+
+- Replace `robots.txt` with `robots.production.txt` in the launch commit (current allowlist of search and answer-engine crawlers, sitemap and AI-Agent lines). `sitemap.xml` and `feed.xml` are generated files: regenerate after adding pages with `python scripts/sitemap.py` (and `python scripts/og-and-variants.py` for the og:image crop and hero variants of a new page; no priority/changefreq, lastmod only on articles).
+- Verify the domain in Google Search Console and Bing Webmaster Tools the day of launch; submit the sitemap in both. Bing's IndexNow is free through Cloudflare (Crawler Hints, below). Never enable the GSC "exclude from generative AI" setting; it removes the site from AI Overviews and AI Mode.
+- Cloudflare zone: turn ON Crawler Hints, Early Hints, and Speed Brain; leave Rocket Loader OFF (breaks the hero/nav script) and Polish/Mirage OFF (images are already sized and compressed here); set the AI bot controls to allow the Search and Agent categories (Training is Kevin's call, allowed by policy on his own sites).
+- Deploy the forms Worker with the new origins before the contact page goes live: `cd CoreRail\corerail-forms && npm run deploy` (entries for crcoffeenola.com, www, and test.crcoffeenola.com are in `src/sites.js`).
+- Google Business Profile: point every location's website field at its own page with UTM tags (`?utm_source=google&utm_medium=organic&utm_campaign=gbp`), confirm hours match the site, and create the MSY listing (it has none). Apple Business Connect, Bing Places, Yelp, and TripAdvisor get the same name, address, phone, and hours. Ask for Google reviews only; never solicit Yelp reviews.
+- After launch, check the Bing Webmaster Tools "AI Performance" report and the GSC generative AI report monthly for which pages get cited.
+
 - The /coffee film embed needs `frame-src https://www.youtube-nocookie.com` when the production CSP is added to `_headers` (the beta has no CSP). The four location pages also embed Google Maps, so the same CSP needs `frame-src https://www.google.com` alongside it.
 - Re-point Cloudflare zone/GSC as planned; `_redirects` here is already launch-ready (why-cr-coffee → about, press → news, Crescent Room paths → magazine-street, drink pages → menu anchors).
 - OPEN QUESTION for Kevin: `/bayou-beast` currently 301s to /drinks; if the Beast returns in 2027, resurrect a landing page at that path instead.

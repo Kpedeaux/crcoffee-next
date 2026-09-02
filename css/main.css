@@ -89,7 +89,7 @@ h1, h2, h3 { text-wrap: balance; } /* no widowed words in headings */
   display: flex; align-items: center; gap: 2rem;
 }
 .header__brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
-.header__mark { width: 34px; height: 34px; border-radius: 3px; }
+.header__mark { width: 34px; height: 34px; border-radius: 3px; object-fit: cover; }
 .header__wordmark {
   color: var(--cream); font-size: 0.82rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap;
@@ -503,7 +503,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 }
 @media (prefers-reduced-motion: no-preference) {
   .page-hero--film .kicker, .page-hero--film .page-hero__title,
-  .page-hero--film .page-hero__sub, .page-hero--film .chips {
+  .page-hero--film .page-hero__sub, .page-hero--film .chips, .page-hero--film .page-hero__proof {
     opacity: 0; transform: translateY(14px);
     animation: hero-rise 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   }
@@ -542,6 +542,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   max-width: 20ch;
 }
 .page-hero__sub { font-size: clamp(1rem, 0.95rem + 0.3vw, 1.13rem); line-height: 1.65; color: rgba(250, 248, 245, 0.78); max-width: 40rem; }
+.page-hero__proof { font-size: 0.8rem; letter-spacing: 0.04em; color: rgba(250, 248, 245, 0.55); margin-top: 0.9rem; }
 .chips { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.4rem; }
 .chip {
   border: 1px solid rgba(250, 248, 245, 0.25); border-radius: 999px;
@@ -706,13 +707,13 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.4fr; gap: 2.5rem;
 }
 .footer__lockup { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.8rem; }
-.footer__lockup img { width: 30px; height: 30px; border-radius: 3px; }
+.footer__lockup img { width: 30px; height: 30px; border-radius: 3px; object-fit: cover; }
 .footer__wordmark { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); }
 .footer__tagline { font-size: 0.88rem; line-height: 1.6; color: rgba(250, 248, 245, 0.6); max-width: 240px; }
 .footer__col { display: flex; flex-direction: column; gap: 0.55rem; }
 .footer__heading {
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-  color: rgba(250, 248, 245, 0.45); margin-bottom: 0.3rem;
+  color: rgba(250, 248, 245, 0.6); margin-bottom: 0.3rem;
 }
 .footer__link { color: rgba(250, 248, 245, 0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
 .footer__link:hover { color: var(--cream); }
@@ -720,7 +721,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   max-width: var(--container); margin: 0 auto;
   border-top: 1px solid rgba(250, 248, 245, 0.1); padding-top: 1.5rem;
   display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
-  font-size: 0.82rem; color: rgba(250, 248, 245, 0.45);
+  font-size: 0.82rem; color: rgba(250, 248, 245, 0.6);
 }
 .footer__legal { display: flex; gap: 1.5rem; }
 @media (max-width: 860px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
@@ -739,3 +740,16 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .mobile-order-bar.is-visible { transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) { .mobile-order-bar { transition: none; } }
 @media (min-width: 761px) { .mobile-order-bar { display: none; } }
+
+/* Footer email capture (posts to the CoreRail forms Worker; see hero.js) */
+.footer-signup { margin-top: 1.2rem; max-width: 22rem; position: relative; }
+.footer-signup__label { display: block; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(250, 248, 245, 0.62); margin-bottom: 0.55rem; }
+.footer-signup__row { display: flex; gap: 0.5rem; }
+.footer-signup__input { flex: 1; min-width: 0; background: rgba(250, 248, 245, 0.06); border: 1px solid rgba(250, 248, 245, 0.24); color: var(--cream); padding: 0.58rem 0.75rem; border-radius: 4px; font: inherit; font-size: 0.88rem; }
+.footer-signup__input::placeholder { color: rgba(250, 248, 245, 0.38); }
+.footer-signup__btn { font: inherit; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; color: var(--espresso); background: var(--cream); border: 0; border-radius: 4px; padding: 0.58rem 0.95rem; cursor: pointer; white-space: nowrap; transition: background 0.2s ease, color 0.2s ease; }
+.footer-signup__btn:hover { background: var(--red); color: var(--cream); }
+.footer-signup__btn[disabled] { opacity: 0.6; cursor: default; }
+.footer-signup__status { font-size: 0.82rem; color: rgba(250, 248, 245, 0.78); margin-top: 0.5rem; min-height: 1.1em; }
+.footer-signup__fine { font-size: 0.74rem; line-height: 1.5; color: rgba(250, 248, 245, 0.6); margin-top: 0.35rem; }
+.footer-signup__fine a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }

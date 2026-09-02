@@ -7,10 +7,25 @@
   <meta name="robots" content="noindex, nofollow">
   <title>CR Coffee Shop MSY Airport | Coffee at New Orleans Airport</title>
   <meta name="description" content="CR Coffee is inside Louis Armstrong New Orleans International Airport (MSY), serving Coast Roast Coffee to travelers. Your first and last taste of New Orleans coffee.">
+  <link rel="canonical" href="https://crcoffeenola.com/msy-airport">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CR Coffee Shop">
+  <meta property="og:url" content="https://crcoffeenola.com/msy-airport">
+  <meta property="og:title" content="CR Coffee Shop MSY Airport | Coffee at New Orleans Airport">
+  <meta property="og:description" content="CR Coffee is inside Louis Armstrong New Orleans International Airport (MSY), serving Coast Roast Coffee to travelers. Your first and last taste of New Orleans coffee.">
+  <meta property="og:image" content="https://crcoffeenola.com/img/og/msy-airport.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Louis Armstrong International Airport">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192x192.png">
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#151210">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="stylesheet" href="/css/main.css?v=17">
+  <link rel="stylesheet" href="/css/main.css?v=18">
 </head>
 <body>
 
@@ -27,6 +42,7 @@
         <a class="header__link" href="/coffee">Our Coffee</a>
         <a class="header__link" href="/#locations">Locations</a>
         <a class="header__link" href="/news">News</a>
+        <a class="header__link" href="/wholesale">Wholesale</a>
       </nav>
       <a class="btn btn--primary header__order" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
       <button class="header__burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
@@ -61,8 +77,8 @@
     <section class="page-hero page-hero--film">
       <div class="page-hero__media" aria-hidden="true">
         <picture>
-          <source srcset="/img/port-skyline.webp" type="image/webp">
-          <img src="/img/port-skyline.jpg" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
+          <source srcset="/img/port-skyline-960.webp 960w, /img/port-skyline-1440.webp 1440w, /img/port-skyline.webp 1600w" sizes="100vw" type="image/webp">
+          <img src="/img/port-skyline.jpg" srcset="/img/port-skyline-960.jpg 960w, /img/port-skyline-1440.jpg 1440w, /img/port-skyline.jpg 1600w" sizes="100vw" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
         </picture>
         <div class="page-hero__scrim"></div>
       </div>
@@ -77,8 +93,8 @@
       <div class="split">
         <div class="split__media">
           <picture>
-            <source srcset="/img/msy-kiosk-clean.webp" type="image/webp">
-            <img src="/img/msy-kiosk-clean.jpg" alt="The CR Coffee kiosk inside Moisant Market at MSY, under the terminal string lights" width="1200" height="900" loading="lazy" decoding="async">
+            <source srcset="/img/msy-kiosk-clean-640.webp 640w, /img/msy-kiosk-clean.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" type="image/webp">
+            <img src="/img/msy-kiosk-clean.jpg" srcset="/img/msy-kiosk-clean-640.jpg 640w, /img/msy-kiosk-clean.jpg 1200w" sizes="(max-width: 900px) 100vw, 50vw" alt="The CR Coffee kiosk inside Moisant Market at MSY, under the terminal string lights" width="1200" height="900" loading="lazy" decoding="async">
           </picture>
         </div>
         <div class="split__text">
@@ -120,7 +136,7 @@
           </div>
         </div>
         <div class="map-embed" style="margin-top: 1.8rem;">
-          <iframe src="https://www.google.com/maps?q=Louis+Armstrong+New+Orleans+International+Airport,+1+Terminal+Dr,+Kenner,+LA+70062&output=embed" title="Map to Louis Armstrong New Orleans International Airport" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <iframe data-src="https://www.google.com/maps?q=Louis+Armstrong+New+Orleans+International+Airport,+1+Terminal+Dr,+Kenner,+LA+70062&output=embed" title="Map to Louis Armstrong New Orleans International Airport" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -165,6 +181,17 @@
           <span class="footer__wordmark">CR Coffee Shop</span>
         </div>
         <p class="footer__tagline">Serving antique roasted coffee. New Orleans since 2015.</p>
+        <form class="footer-signup" novalidate>
+          <label class="footer-signup__label" for="footer-email">Shop news by email</label>
+          <div class="footer-signup__row">
+            <input class="footer-signup__input" id="footer-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+            <button class="footer-signup__btn" type="submit">Sign up</button>
+          </div>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px;">
+          <p class="footer-signup__status" role="status" aria-live="polite"></p>
+          <p class="footer-signup__fine">New blends, events, and shop news, a few times a month. Unsubscribe anytime. See our <a href="/privacy">privacy policy</a>.</p>
+          <noscript><p class="footer-signup__fine">To join the list, email <a href="mailto:coastroastcoffeestroch@gmail.com">coastroastcoffeestroch@gmail.com</a>.</p></noscript>
+        </form>
       </div>
       <nav class="footer__col" aria-label="Locations">
         <p class="footer__heading">Locations</p>
@@ -181,6 +208,10 @@
         <a class="footer__link" href="/rewards">Rewards</a>
         <a class="footer__link" href="/wholesale">Wholesale</a>
         <a class="footer__link" href="/news">News</a>
+        <a class="footer__link" href="/catering">Catering</a>
+        <a class="footer__link" href="/gift-cards">Gift Cards</a>
+        <a class="footer__link" href="/chicory-coffee">Chicory Coffee</a>
+        <a class="footer__link" href="/contact">Contact</a>
       </nav>
       <nav class="footer__col" aria-label="Connect">
         <p class="footer__heading">Connect</p>
@@ -200,7 +231,7 @@
     </div>
   </footer>
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://crcoffeenola.com/#organization","name":"CR Coffee Shop","url":"https://crcoffeenola.com/","email":"coastroastcoffeestroch@gmail.com","sameAs":["https://instagram.com/crcoffeeshop","https://facebook.com/CRCoffeeShop","https://www.tiktok.com/@crcoffeeshop","https://www.youtube.com/coffeewithkevin"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://crcoffeenola.com/#organization","name":"CR Coffee Shop","url":"https://crcoffeenola.com/","logo":{"@type":"ImageObject","url":"https://crcoffeenola.com/img/favicon-512x512.png","width":512,"height":512},"email":"coastroastcoffeestroch@gmail.com","telephone":"+15043549422","sameAs":["https://instagram.com/crcoffeeshop","https://facebook.com/CRCoffeeShop","https://www.tiktok.com/@crcoffeeshop","https://www.youtube.com/coffeewithkevin"]}</script>
 
   <script type="application/ld+json">
   {
@@ -215,15 +246,33 @@
   </script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CafeOrCoffeeShop",
-    "@id": "https://crcoffeenola.com/msy-airport#location",
-    "name": "CR Coffee Shop, MSY Airport",
-    "alternateName": "CR Coffee New Orleans Airport",
-    "description": "CR Coffee Shop inside Louis Armstrong New Orleans International Airport (MSY). Serving Coast Roast Coffee roasted on antique 1910s drum roasters to travelers arriving and departing New Orleans. Hours vary by terminal and flight schedule.",
-    "url": "https://crcoffeenola.com/msy-airport",
-    "image": "https://crcoffeenola.com/img/msy-kiosk-clean.jpg",
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "@id": "https://crcoffeenola.com/msy-airport#location",
+  "name": "CR Coffee Shop, MSY Airport",
+  "alternateName": "CR Coffee New Orleans Airport",
+  "description": "CR Coffee Shop inside Louis Armstrong New Orleans International Airport (MSY). Serving Coast Roast Coffee roasted on antique 1910s drum roasters to travelers arriving and departing New Orleans. Hours vary by terminal and flight schedule.",
+  "url": "https://crcoffeenola.com/msy-airport",
+  "image": "https://crcoffeenola.com/img/msy-kiosk-clean.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1 Terminal Dr",
+    "addressLocality": "Kenner",
+    "addressRegion": "LA",
+    "postalCode": "70062",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 29.9942,
+    "longitude": -90.264304
+  },
+  "containedInPlace": {
+    "@type": "Airport",
+    "name": "Louis Armstrong New Orleans International Airport",
+    "iataCode": "MSY",
+    "url": "https://flymsy.com/",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1 Terminal Dr",
@@ -231,24 +280,18 @@
       "addressRegion": "LA",
       "postalCode": "70062",
       "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.9934,
-      "longitude": -90.2580
-    },
-    "containedInPlace": {
-      "@type": "Airport",
-      "name": "Louis Armstrong New Orleans International Airport",
-      "iataCode": "MSY",
-      "url": "https://flymsy.com/"
-    },
-    "servesCuisine": ["Coffee", "Espresso", "Cold Brew"],
-    "priceRange": "$$",
-    "parentOrganization": {
-      "@id": "https://crcoffeenola.com/#organization"
     }
+  },
+  "servesCuisine": [
+    "Coffee",
+    "Espresso",
+    "Cold Brew"
+  ],
+  "priceRange": "$$",
+  "parentOrganization": {
+    "@id": "https://crcoffeenola.com/#organization"
   }
+}
   </script>
 
   <script type="application/ld+json">
@@ -275,6 +318,6 @@
   }
   </script>
 
-  <script src="/js/hero.js?v=12" defer></script>
+  <script src="/js/hero.js?v=13" defer></script>
 </body>
 </html>

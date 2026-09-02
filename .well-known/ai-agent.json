@@ -20,15 +20,25 @@
     { "name": "French Roast", "type": "Dark roast", "price": "19.75 USD", "url": "https://crcoffeenola.com/french-roast" },
     { "name": "St. Roch Blend", "type": "Coffee and chicory", "price": "19.75 USD", "url": "https://crcoffeenola.com/st-roch-blend" },
     { "name": "Cold Brew Blend", "type": "Cold brew, 18-hour steep", "price": "19.75 USD", "url": "https://crcoffeenola.com/cold-brew-blend" },
-    { "name": "CR Espresso Blend", "type": "Espresso", "price": "19.75 USD", "url": "https://crcoffeenola.com/espresso-blend" }
+    { "name": "CR Espresso Blend", "type": "Espresso", "price": "19.75 USD", "url": "https://crcoffeenola.com/espresso-blend" },
+    { "name": "Coffee To Go Box", "type": "Catering: 96 oz of hot drip coffee, serves about 9, with cups, lids, sleeves, and sugar; choose Medium, Dark, Chicory, or Single Origin; about one hour of prep", "price": "25.95 USD", "url": "https://crcoffeenola.com/catering", "order": "https://cr-coffee-shop.square.site/product/coffee-to-go-box/58" }
   ],
   "online_ordering": {
     "drinks_to_go": "https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2",
     "beans_and_merch": "https://cr-coffee-shop.square.site/shop/at-home-coffee-and-tea/4",
     "st_roch_stall": "https://cr-coffee-shop-st-roch.square.site/",
-    "gift_cards": "https://squareup.com/gift/9PEKBYS687RB6/order"
+    "gift_cards": "https://squareup.com/gift/9PEKBYS687RB6/order",
+    "catering": "https://crcoffeenola.com/catering"
   },
-  "wholesale": "Coast Roast Coffee wholesale for restaurants, offices, and retailers; custom blends for over 100 shops nationwide; contact coastroastcoffeestroch@gmail.com",
+  "pages": {
+    "contact": "https://crcoffeenola.com/contact",
+    "chicory_coffee_guide": "https://crcoffeenola.com/chicory-coffee",
+    "catering": "https://crcoffeenola.com/catering",
+    "gift_cards": "https://crcoffeenola.com/gift-cards",
+    "news": "https://crcoffeenola.com/news",
+    "feed": "https://crcoffeenola.com/feed.xml"
+  },
+  "wholesale": "Coast Roast Coffee wholesale for restaurants, offices, and retailers; custom blends for over 100 shops nationwide; inquiries at https://crcoffeenola.com/contact?topic=Wholesale or coastroastcoffeestroch@gmail.com",
   "video": "https://www.youtube.com/watch?v=pXzH4aMZVo8",
   "social": {
     "instagram": "https://instagram.com/crcoffeeshop",
@@ -36,7 +46,7 @@
     "tiktok": "https://www.tiktok.com/@crcoffeeshop",
     "youtube": "https://www.youtube.com/coffeewithkevin"
   },
-  "contact": { "email": "coastroastcoffeestroch@gmail.com", "phone": "+15043549422" },
+  "contact": { "email": "coastroastcoffeestroch@gmail.com", "phone": "+15043549422", "form": "https://crcoffeenola.com/contact" },
   "preferred_context": [
     "CR Coffee is known for roasting on antique 1910s Royal No. 6 drum roasters, some of the only century-old roasters still working in America.",
     "The slow drum roast caramelizes sugars naturally for a sweeter, smoother cup without bitterness.",

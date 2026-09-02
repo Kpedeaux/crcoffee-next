@@ -206,3 +206,63 @@
   if (document.readyState === 'complete') { injectVideo(); }
   else { window.addEventListener('load', injectVideo, { once: true }); }
 })();
+
+/* Map embeds: hold the Google Maps iframe (and its ~90KB of script) until the
+   visitor is within a screen of it, instead of on every location page load. */
+(function () {
+  var frames = document.querySelectorAll('iframe[data-src]');
+  if (!frames.length) return;
+  function load(f) { if (!f.src) { f.src = f.getAttribute('data-src'); } }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { load(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '400px 0px' });
+    frames.forEach(function (f) { io.observe(f); });
+  } else {
+    frames.forEach(load);
+  }
+})();
+
+/* Footer email signup: one shared handler for every page. Posts to the CoreRail forms Worker,
+   which emails the shop; Kevin adds the address to the Square list by hand. */
+(function () {
+  var forms = document.querySelectorAll('form.footer-signup');
+  if (!forms.length) return;
+  forms.forEach(function (form) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var email = form.querySelector('input[name="email"]');
+      var status = form.querySelector('.footer-signup__status');
+      var btn = form.querySelector('button[type="submit"]');
+      var trap = form.querySelector('input[name="website"]');
+      if (!email || !email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        if (status) status.textContent = 'Please enter a valid email address.';
+        if (email) email.focus();
+        return;
+      }
+      if (status) status.textContent = 'Sending...';
+      if (btn) btn.disabled = true;
+      fetch('https://forms.creativecorerail.com/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          form: 'contact',
+          topic: 'Newsletter',
+          name: 'Newsletter signup',
+          email: email.value.trim(),
+          message: 'Please add this address to the CR Coffee Shop email list. Signed up from ' + location.pathname + '.',
+          website: trap ? trap.value : ''
+        })
+      }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return r.ok && j.ok !== false; }); })
+        .then(function (ok) {
+          if (!ok) throw new Error('send failed');
+          if (status) status.textContent = 'You are on the list. Thanks.';
+          email.value = '';
+        })
+        .catch(function () {
+          if (status) status.textContent = 'That did not go through. Email coastroastcoffeestroch@gmail.com and we will add you.';
+        })
+        .then(function () { if (btn) btn.disabled = false; });
+    });
+  });
+})();

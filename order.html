@@ -7,10 +7,25 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Order Online | Pickup, Delivery, and Nationwide Shipping | CR Coffee Shop</title>
   <meta name="description" content="Order CR Coffee online: drinks to go for pickup at Magazine Street and Old Metairie, delivery straight from our Square store, and beans, merch, and gift cards shipped nationwide.">
+  <link rel="canonical" href="https://crcoffeenola.com/order">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CR Coffee Shop">
+  <meta property="og:url" content="https://crcoffeenola.com/order">
+  <meta property="og:title" content="Order Online | Pickup, Delivery, and Nationwide Shipping">
+  <meta property="og:description" content="Order CR Coffee online: drinks to go for pickup at Magazine Street and Old Metairie, delivery straight from our Square store, and beans, merch, and gift cards shipped nationwide.">
+  <meta property="og:image" content="https://crcoffeenola.com/img/og/order.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Skip the line. Your order's waiting.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192x192.png">
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#151210">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="stylesheet" href="/css/main.css?v=17">
+  <link rel="stylesheet" href="/css/main.css?v=18">
 </head>
 <body>
 
@@ -27,6 +42,7 @@
         <a class="header__link" href="/coffee">Our Coffee</a>
         <a class="header__link" href="/#locations">Locations</a>
         <a class="header__link" href="/news">News</a>
+        <a class="header__link" href="/wholesale">Wholesale</a>
       </nav>
       <a class="btn btn--primary header__order" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
       <button class="header__burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
@@ -61,8 +77,8 @@
     <section class="page-hero page-hero--film">
       <div class="page-hero__media" aria-hidden="true">
         <picture>
-          <source srcset="/img/hero-poster.webp" type="image/webp">
-          <img src="/img/hero-poster.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+          <source srcset="/img/hero-poster-960.webp 960w, /img/hero-poster-1440.webp 1440w, /img/hero-poster.webp 1920w" sizes="100vw" type="image/webp">
+          <img src="/img/hero-poster.jpg" srcset="/img/hero-poster-960.jpg 960w, /img/hero-poster-1440.jpg 1440w, /img/hero-poster.jpg 1920w" sizes="100vw" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
         </picture>
         <div class="page-hero__scrim"></div>
       </div>
@@ -80,7 +96,7 @@
     <section class="section-pad" aria-label="Pickup">
       <div class="split">
         <div class="split__media">
-          <img src="/img/order-hero-banner.jpg" alt="Cream pouring into an iced coffee at CR Coffee Shop" width="1080" height="460" loading="lazy" decoding="async">
+          <picture><source srcset="/img/order-hero-banner-640.webp 640w, /img/order-hero-banner.webp 1080w" sizes="(max-width: 900px) 100vw, 50vw" type="image/webp"><img src="/img/order-hero-banner.jpg" srcset="/img/order-hero-banner-640.jpg 640w, /img/order-hero-banner.jpg 1080w" sizes="(max-width: 900px) 100vw, 50vw" alt="Cream pouring into an iced coffee at CR Coffee Shop" width="1080" height="460" loading="lazy" decoding="async"></picture>
         </div>
         <div class="split__text">
           <p class="kicker">Pickup</p>
@@ -106,8 +122,8 @@
     <section class="section-pad reveal" style="padding-top: 0;" aria-label="Ship anywhere">
       <div class="split split--flip">
         <div class="split__media">
-          <img src="/img/order-card-beans.jpg" alt="A bag of CR Coffee Streetcar Blend, roasted close to ship date" width="450" height="340" loading="lazy" decoding="async">
-          <img class="split__inset" src="/img/streetcar-mugs.jpg" alt="CR Coffee mugs and tumblers" width="800" height="533" loading="lazy" decoding="async">
+          <picture><source srcset="/img/order-card-beans.webp" type="image/webp"><img src="/img/order-card-beans.jpg" alt="A bag of CR Coffee Streetcar Blend, roasted close to ship date" width="450" height="340" loading="lazy" decoding="async"></picture>
+          <picture><source srcset="/img/streetcar-mugs.webp" type="image/webp"><img class="split__inset" src="/img/streetcar-mugs.jpg" alt="CR Coffee mugs and tumblers" width="800" height="533" loading="lazy" decoding="async"></picture>
         </div>
         <div class="split__text">
           <p class="kicker">Ship anywhere</p>
@@ -152,6 +168,17 @@
           <span class="footer__wordmark">CR Coffee Shop</span>
         </div>
         <p class="footer__tagline">Serving antique roasted coffee. New Orleans since 2015.</p>
+        <form class="footer-signup" novalidate>
+          <label class="footer-signup__label" for="footer-email">Shop news by email</label>
+          <div class="footer-signup__row">
+            <input class="footer-signup__input" id="footer-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+            <button class="footer-signup__btn" type="submit">Sign up</button>
+          </div>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px;">
+          <p class="footer-signup__status" role="status" aria-live="polite"></p>
+          <p class="footer-signup__fine">New blends, events, and shop news, a few times a month. Unsubscribe anytime. See our <a href="/privacy">privacy policy</a>.</p>
+          <noscript><p class="footer-signup__fine">To join the list, email <a href="mailto:coastroastcoffeestroch@gmail.com">coastroastcoffeestroch@gmail.com</a>.</p></noscript>
+        </form>
       </div>
       <nav class="footer__col" aria-label="Locations">
         <p class="footer__heading">Locations</p>
@@ -168,6 +195,10 @@
         <a class="footer__link" href="/rewards">Rewards</a>
         <a class="footer__link" href="/wholesale">Wholesale</a>
         <a class="footer__link" href="/news">News</a>
+        <a class="footer__link" href="/catering">Catering</a>
+        <a class="footer__link" href="/gift-cards">Gift Cards</a>
+        <a class="footer__link" href="/chicory-coffee">Chicory Coffee</a>
+        <a class="footer__link" href="/contact">Contact</a>
       </nav>
       <nav class="footer__col" aria-label="Connect">
         <p class="footer__heading">Connect</p>
@@ -187,7 +218,7 @@
     </div>
   </footer>
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://crcoffeenola.com/#organization","name":"CR Coffee Shop","url":"https://crcoffeenola.com/","email":"coastroastcoffeestroch@gmail.com","sameAs":["https://instagram.com/crcoffeeshop","https://facebook.com/CRCoffeeShop","https://www.tiktok.com/@crcoffeeshop","https://www.youtube.com/coffeewithkevin"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://crcoffeenola.com/#organization","name":"CR Coffee Shop","url":"https://crcoffeenola.com/","logo":{"@type":"ImageObject","url":"https://crcoffeenola.com/img/favicon-512x512.png","width":512,"height":512},"email":"coastroastcoffeestroch@gmail.com","telephone":"+15043549422","sameAs":["https://instagram.com/crcoffeeshop","https://facebook.com/CRCoffeeShop","https://www.tiktok.com/@crcoffeeshop","https://www.youtube.com/coffeewithkevin"]}</script>
 
   <script type="application/ld+json">
   {
@@ -226,6 +257,6 @@
   }
   </script>
 
-  <script src="/js/hero.js?v=12" defer></script>
+  <script src="/js/hero.js?v=13" defer></script>
 </body>
 </html>
