@@ -22,6 +22,11 @@ export async function onRequest(context) {
   const { request, next } = context;
   const url = new URL(request.url);
 
+  // Repo housekeeping that ships with the static tree but is not part of the site.
+  if (url.pathname.startsWith('/docs/') || url.pathname.startsWith('/scripts/') || url.pathname === '/README.md') {
+    return new Response('Not found', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'X-Robots-Tag': 'noindex' } });
+  }
+
   if (url.hostname === PAGES_DEV_PRODUCTION_HOST) {
     const canonical = new URL(
       url.pathname + url.search,
