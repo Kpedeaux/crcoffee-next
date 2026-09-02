@@ -47,6 +47,7 @@
         <a class="header__link" href="#locations">Locations</a>
         <a class="header__link" href="/news" rel="noopener">News</a>
       <a class="header__link" href="/wholesale">Wholesale</a>
+      <a class="header__link" href="/crescent-room">Crescent Room</a>
       </nav>
       <a class="btn btn--primary header__order" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
       <button class="header__burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
@@ -72,6 +73,7 @@
       <a class="mobile-nav__link" href="/about" rel="noopener">About</a>
       <a class="mobile-nav__link" href="/rewards" rel="noopener">Rewards</a>
       <a class="mobile-nav__link" href="/wholesale" rel="noopener">Wholesale</a>
+    <a class="mobile-nav__link" href="/crescent-room">The Crescent Room</a>
     </nav>
     <a class="btn btn--primary btn--bar mobile-nav__order" href="https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2" rel="noopener">Order ahead</a>
   </div>
@@ -338,6 +340,27 @@
       </div>
     </section>
 
+    <section class="section-pad reveal" id="crescent-room" aria-label="The Crescent Room">
+      <div class="split">
+        <div class="split__media">
+          <picture>
+            <source srcset="/img/crescent-room-table.webp" type="image/webp">
+            <img src="/img/crescent-room-table.jpg" alt="The handcrafted conference table inside The Crescent Room at CR Coffee Magazine Street" width="600" height="800" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="split__text">
+          <p class="kicker">Magazine Street</p>
+          <h2 class="section-title">The Crescent Room.</h2>
+          <p class="split__body">A private meeting room inside our Magazine Street shop. Seats up to 12 at a handcrafted conference table, with a presentation TV, fast Wi-Fi, and hot drip coffee included. Rentals from $75, booked online.</p>
+          <div style="display: flex; gap: 0.9rem; align-items: center; flex-wrap: wrap; margin-top: 0.4rem;">
+            <a class="btn btn--primary" href="https://coffeeshop.creativecorerail.com/book/cr" rel="noopener">Book the room</a>
+            <a class="btn btn--ghost" href="/crescent-room">See the room</a>
+          </div>
+          <p style="font-size: 0.82rem; color: rgba(250,248,245,0.55); margin-top: 0.9rem;">Booked and paid online in a couple of minutes. The coffee is ready when you walk in.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="news reveal" id="news" aria-label="News from the shop">
       <div class="news__head">
         <h2 class="section-title">The latest.</h2>
@@ -370,6 +393,10 @@
           <details class="faq-fold__item">
             <summary><span>What time does CR Coffee open?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
             <p class="faq-fold__a">Magazine Street is open daily from 6am to 7pm. St. Roch Market pours daily from 7am to 7pm. Metairie Road opens weekdays 6am to 6pm and weekends 7am to 6pm. Hours at the MSY Airport kiosk vary by terminal.</p>
+          </details>
+          <details class="faq-fold__item">
+            <summary><span>Do you have a private meeting room?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <p class="faq-fold__a">Yes. The Crescent Room at Magazine Street seats up to 12 with a conference table, presentation TV, fast Wi-Fi, and hot drip coffee included. Rentals start at $75. <a href="https://coffeeshop.creativecorerail.com/book/cr" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Book online</a> or <a href="/crescent-room" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">see the room</a>.</p>
           </details>
           <details class="faq-fold__item">
             <summary><span>Can I order ahead online?</span><svg class="faq-fold__chev" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
@@ -450,7 +477,8 @@
         <a class="footer__link" href="/rewards" rel="noopener">Rewards</a>
         <a class="footer__link" href="/wholesale" rel="noopener">Wholesale</a>
         <a class="footer__link" href="/news" rel="noopener">News</a>
-      <a class="footer__link" href="/catering">Catering</a>
+      <a class="footer__link" href="/crescent-room">The Crescent Room</a>
+        <a class="footer__link" href="/catering">Catering</a>
       <a class="footer__link" href="/gift-cards">Gift Cards</a>
       <a class="footer__link" href="/chicory-coffee">Chicory Coffee</a>
       <a class="footer__link" href="/contact">Contact</a>
@@ -566,52 +594,84 @@
   </script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What time does CR Coffee open?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Magazine Street is open daily from 6am to 7pm. St. Roch Market pours daily from 7am to 7pm. Metairie Road opens weekdays 6am to 6pm and weekends 7am to 6pm. Hours at the MSY Airport kiosk vary by terminal." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I order ahead online?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Order through our Square store and your drink is ready at the counter when you walk in at Magazine Street or Old Metairie. St. Roch Market takes orders through its own store, linked on that location's page." }
-      },
-      {
-        "@type": "Question",
-        "name": "Does CR Coffee have Wi-Fi and seating for laptops?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Magazine Street has fast Wi-Fi, indoor seating with a fireplace lounge, and a shaded side patio, about ten minutes from Tulane and Loyola." }
-      },
-      {
-        "@type": "Question",
-        "name": "Is CR Coffee dog friendly?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Magazine Street has a dog-friendly courtyard with outdoor seating and a covered porch." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you have oat milk or almond milk?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Any drink made with milk, from lattes to chai, can be made with whole, skim, oat, or almond milk." }
-      },
-      {
-        "@type": "Question",
-        "name": "Where can I buy CR Coffee beans?",
-        "acceptedAnswer": { "@type": "Answer", "text": "All five blends are $19.75 for a 12 ounce bag, whole bean or ground. Pick up a bag at the counter, or order online and we ship anywhere in the U.S., roasted the week it ships." }
-      },
-      {
-        "@type": "Question",
-        "name": "Does CR Coffee sell gift cards?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Digital CR Coffee gift cards are available online and deliver by email, for birthdays, holidays, or just because." }
-      },
-      {
-        "@type": "Question",
-        "name": "Does CR Coffee have a rewards program?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. CR Coffee Rewards earns 1 Bean for every dollar at Magazine Street and Old Metairie, and 100 Beans earns a free drink. No app and no card. Give your name or phone number at the register and you are enrolled." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What time does CR Coffee open?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Magazine Street is open daily from 6am to 7pm. St. Roch Market pours daily from 7am to 7pm. Metairie Road opens weekdays 6am to 6pm and weekends 7am to 6pm. Hours at the MSY Airport kiosk vary by terminal."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have a private meeting room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Crescent Room at Magazine Street seats up to 12 with a conference table, presentation TV, fast Wi-Fi, and hot drip coffee included. Rentals start at $75. Book online at https://coffeeshop.creativecorerail.com/book/cr or see the room at https://crcoffeenola.com/crescent-room."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I order ahead online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Order through our Square store and your drink is ready at the counter when you walk in at Magazine Street or Old Metairie. St. Roch Market takes orders through its own store, linked on that location's page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CR Coffee have Wi-Fi and seating for laptops?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Magazine Street has fast Wi-Fi, indoor seating with a fireplace lounge, and a shaded side patio, about ten minutes from Tulane and Loyola."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is CR Coffee dog friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Magazine Street has a dog-friendly courtyard with outdoor seating and a covered porch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have oat milk or almond milk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Any drink made with milk, from lattes to chai, can be made with whole, skim, oat, or almond milk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I buy CR Coffee beans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All five blends are $19.75 for a 12 ounce bag, whole bean or ground. Pick up a bag at the counter, or order online and we ship anywhere in the U.S., roasted the week it ships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CR Coffee sell gift cards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Digital CR Coffee gift cards are available online and deliver by email, for birthdays, holidays, or just because."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CR Coffee have a rewards program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CR Coffee Rewards earns 1 Bean for every dollar at Magazine Street and Old Metairie, and 100 Beans earns a free drink. No app and no card. Give your name or phone number at the register and you are enrolled."
+      }
+    }
+  ]
+}
   </script>
 
   <script src="/js/hero.js?v=13" defer></script>

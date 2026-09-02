@@ -49,13 +49,13 @@ The running list of off-site and launch-day work (listings, reviews, PR, Cloudfl
 - After launch, check the Bing Webmaster Tools "AI Performance" report and the GSC generative AI report monthly for which pages get cited.
 
 - The /coffee film embed needs `frame-src https://www.youtube-nocookie.com` when the production CSP is added to `_headers` (the beta has no CSP). The four location pages also embed Google Maps, so the same CSP needs `frame-src https://www.google.com` alongside it.
-- Re-point Cloudflare zone/GSC as planned; `_redirects` here is already launch-ready (why-cr-coffee → about, press → news, Crescent Room paths → magazine-street, drink pages → menu anchors).
+- Re-point Cloudflare zone/GSC as planned; `_redirects` here is already launch-ready (why-cr-coffee → about, press → news, Crescent Room paths → /crescent-room, drink pages → menu anchors).
 - OPEN QUESTION for Kevin: `/bayou-beast` currently 301s to /drinks; if the Beast returns in 2027, resurrect a landing page at that path instead.
 
 - Swap the beta no-cache block in `_headers` for the production caching policy (see the comment in that file). The `?v=` version-tag discipline on css/js/video references is what makes the immutable policy safe.
 
 - Redirect map: the old site's inbound URLs (news articles, blend pages, location pages, /order, /bayou-beast) must resolve on the new site or 301 to their replacements. Keep the `/product/*` and `/shop/*` 410 functions behavior.
-- Crescent Room URLs need a decision (redirect to homepage or a farewell note).
+- The Crescent Room is back on the site (2026-09-02): /crescent-room, a homepage section, and the old /events and /crescent-room-at-cr paths 301 there. Booking stays on coffeeshop.creativecorerail.com/book/cr.
 - Reuse the existing GA4 property; verify timezone America/Chicago and 14-month retention.
 - Re-point the production Cloudflare Pages project (or swap repos) per the deploy plan.
 - GSC: submit new sitemap, watch coverage. Also Bing Webmaster Tools + IndexNow (ChatGPT rides Bing's index).

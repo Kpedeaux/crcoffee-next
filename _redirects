@@ -25,15 +25,12 @@
 /press                    /news            301
 /press/                   /news            301
 
-# Crescent Room dropped; closest topical match is the Magazine Street page
-/events                   /magazine-street 301
-/events/                  /magazine-street 301
-/crescent-room            /magazine-street 301
-/crescent-room/           /magazine-street 301
-/crescent-room-at-cr      /magazine-street 301
-/crescent-room-at-cr/     /magazine-street 301
+# The Crescent Room lives at /crescent-room on this site; old event/room paths land there
+/events                   /crescent-room 301
+/events/                  /crescent-room 301
+/crescent-room-at-cr      /crescent-room 301
+/crescent-room-at-cr/     /crescent-room 301
 /s/appointments           /magazine-street 301
-/news/crescent-room-reel-2026 /magazine-street 301
 
 # Drink detail pages folded into the menu (anchors exist on /drinks)
 /cold-brew-cubano         /drinks#cold-brew-cubano 301

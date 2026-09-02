@@ -93,7 +93,6 @@ const BANNED = [
   ["Sun 7am-7pm", "Magazine St is open 6am on Sundays too (daily 6am-7pm)"],
   ["www.crcoffeenola.com", "canonical host is apex crcoffeenola.com"],
   // Rebuild-era rules (2026-08-31):
-  ["Crescent Room", "dropped from the rebuild; redirects point at /magazine-street"],
   ["operates inside Louis Armstrong", "airport is a naming-rights presence: say 'CR Coffee is inside Louis Armstrong'"],
   ["Milk-chocolate, velvety body, citrus lift", "old Streetcar notes; canonical is 'Full body, light acidity, smooth and satisfying finish'"],
   ["unleash", "phrasing barred from all CR copy (trademark caution)"],

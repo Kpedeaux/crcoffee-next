@@ -181,6 +181,15 @@
     <link rel="enclosure" type="image/jpeg" href="https://crcoffeenola.com/img/news/cherry-blossom-matcha-finished.jpg"/>
   </entry>
   <entry>
+    <title>The Crescent Room: Your Private New Orleans Workspace</title>
+    <link href="https://crcoffeenola.com/news/crescent-room-reel-2026" rel="alternate" type="text/html"/>
+    <id>https://crcoffeenola.com/news/crescent-room-reel-2026</id>
+    <published>2026-03-26T12:00:00-05:00</published>
+    <updated>2026-03-26T12:00:00-05:00</updated>
+    <summary>Your favorite New Orleans workspace is tucked away inside a shotgun house. The Crescent Room at CR Coffee Shop is open for bookings: a private, quiet room steps from Magazine Street, with bottomless coffee included.</summary>
+    <link rel="enclosure" type="image/jpeg" href="https://crcoffeenola.com/img/crescent-room-study.jpg"/>
+  </entry>
+  <entry>
     <title>Spring Vibes: Porch &amp; Patio Season Is Here</title>
     <link href="https://crcoffeenola.com/news/spring-vibes-patio-2026" rel="alternate" type="text/html"/>
     <id>https://crcoffeenola.com/news/spring-vibes-patio-2026</id>
@@ -224,14 +233,5 @@
     <updated>2024-01-01T12:00:00-05:00</updated>
     <summary>CR Coffee was featured in The Scout Guide's curated guide to the best of New Orleans. Read about the recognition.</summary>
     <link rel="enclosure" type="image/jpeg" href="https://crcoffeenola.com/img/news/scout-guide-card.jpg"/>
-  </entry>
-  <entry>
-    <title>Magazine Street Renovation Recognized</title>
-    <link href="https://crcoffeenola.com/news/preservation-magazine-street" rel="alternate" type="text/html"/>
-    <id>https://crcoffeenola.com/news/preservation-magazine-street</id>
-    <published>2023-01-01T12:00:00-05:00</published>
-    <updated>2023-01-01T12:00:00-05:00</updated>
-    <summary>The Preservation Resource Center recognized CR Coffee's renovation work at the Magazine Street location. Read about the careful restoration of this historic space.</summary>
-    <link rel="enclosure" type="image/jpeg" href="https://crcoffeenola.com/img/news/preservation-card.jpg"/>
   </entry>
 </feed>

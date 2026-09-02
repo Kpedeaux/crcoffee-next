@@ -23,6 +23,22 @@
     { "name": "CR Espresso Blend", "type": "Espresso", "price": "19.75 USD", "url": "https://crcoffeenola.com/espresso-blend" },
     { "name": "Coffee To Go Box", "type": "Catering: 96 oz of hot drip coffee, serves about 9, with cups, lids, sleeves, and sugar; choose Medium, Dark, Chicory, or Single Origin; about one hour of prep", "price": "25.95 USD", "url": "https://crcoffeenola.com/catering", "order": "https://cr-coffee-shop.square.site/product/coffee-to-go-box/58" }
   ],
+  "crescent_room": {
+    "name": "The Crescent Room",
+    "what": "Private meeting and event room inside the Magazine Street shop",
+    "address": "3618 Magazine St, New Orleans, LA 70115",
+    "seats": 12,
+    "includes": "Handcrafted conference table, wall-mounted presentation TV, fast Wi-Fi, outlets, hot drip coffee included, free street parking nearby",
+    "options": [
+      { "name": "Two Hour Room Rental", "price": "75.00 USD", "duration": "2 hours" },
+      { "name": "Three Hour Room Rental", "price": "98.00 USD", "duration": "3 hours" },
+      { "name": "In Room Coffee and Pastry Service, Three Hour Meeting", "price": "185.00 USD", "duration": "3 hours" }
+    ],
+    "tax": "10.75% sales tax added at checkout",
+    "policy": "All bookings are final and no refunds are given; to reschedule, call the shop at least 48 hours before the booking",
+    "booking": "https://coffeeshop.creativecorerail.com/book/cr",
+    "url": "https://crcoffeenola.com/crescent-room"
+  },
   "online_ordering": {
     "drinks_to_go": "https://cr-coffee-shop.square.site/shop/to-go-coffee-drinks/2",
     "beans_and_merch": "https://cr-coffee-shop.square.site/shop/at-home-coffee-and-tea/4",
@@ -34,6 +50,7 @@
     "contact": "https://crcoffeenola.com/contact",
     "chicory_coffee_guide": "https://crcoffeenola.com/chicory-coffee",
     "catering": "https://crcoffeenola.com/catering",
+    "crescent_room": "https://crcoffeenola.com/crescent-room",
     "gift_cards": "https://crcoffeenola.com/gift-cards",
     "news": "https://crcoffeenola.com/news",
     "feed": "https://crcoffeenola.com/feed.xml"
