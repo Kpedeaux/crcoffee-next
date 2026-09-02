@@ -471,6 +471,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .news-card__title { font-size: 1.08rem; font-weight: 600; line-height: 1.4; color: var(--cream); transition: color 0.2s ease; }
 .news-card:hover .news-card__title { color: rgba(250, 248, 245, 0.8); }
 @media (max-width: 860px) { .news__grid { grid-template-columns: 1fr; } }
+@media (max-width: 700px) {
+  /* Phones: news cards read as a feed, a full-width square photo with the date and title beneath */
+  .news__grid { gap: 2rem; }
+  .news-card__img { aspect-ratio: 1 / 1; }
+}
 
 /* ---- Inner-page kit ------------------------------------------------------------------------ */
 .page-hero {
