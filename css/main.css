@@ -679,9 +679,14 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 
 /* Photo grid (about gallery) */
 .photogrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.photogrid picture { display: contents; }
+.photogrid picture { display: block; min-width: 0; }
 .photogrid img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
-@media (max-width: 700px) { .photogrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+  .photogrid { grid-template-columns: minmax(0, 1fr); gap: 0.6rem; }
+  .photogrid img { aspect-ratio: 1 / 1; }
+  .photorow:not(.photorow--menu) { grid-template-columns: minmax(0, 1fr); gap: 0.6rem; }
+  .photorow:not(.photorow--menu) .photorow__fig img { aspect-ratio: 1 / 1; }
+}
 
 /* ---- Closing CTA (the peak at the end) --------------------------------------------------- */
 .closer {
@@ -823,3 +828,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   .beast__log-row { flex-direction: column; gap: 0.2rem; }
   .beast__log-val { text-align: left; }
 }
+
+/* Two-up form fields stack on phones */
+@media (max-width: 600px) { .form-2col { grid-template-columns: minmax(0, 1fr) !important; } }
